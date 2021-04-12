@@ -1,4 +1,4 @@
-# ultimate-compression-benchmark
+# Ultimate Compression Benchmark
 
 An utility to compare different *streaming* compression algorithms
 and easily get results with graphical tables and charts.
