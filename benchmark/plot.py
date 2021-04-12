@@ -30,7 +30,7 @@ def scatter(data, xlabel, ylabel, output):
             xs, ys,
             label=label,
             marker=".",
-            linewidths=4,
+            linewidths=2,
             color=palette[i % len(palette)],
         )
 
@@ -38,5 +38,5 @@ def scatter(data, xlabel, ylabel, output):
     plt.ylabel(ylabel)
     plt.legend()
 
-    plt.savefig(output)
+    plt.savefig(output, dpi=150)
     plt.clf()
