@@ -66,17 +66,133 @@ class Tool:
         ]
 
 
+def lrange(from_value: int, to_value: int) -> List[int]:
+    """
+    Returns list of numbers in range [`from_value`, `to_value`]
+    """
+
+    return list(range(from_value, to_value + 1))
+
+
 tools = [
-    Tool("cat", "/usr/bin/cat", [None], ["--version"], [], []),
-    Tool("brotli", "/usr/bin/brotli", range(1, 10), ["--version"], ["-{level}"], ["-d"]),
-    Tool("bzip2", "/usr/bin/bzip2", range(1, 10), ["--version", "--help"], ["-{level}"], ["-d"]),
-    Tool("gzip", "/usr/bin/gzip", range(1, 10), ["--version"], ["-{level}"], ["-d"]),
-    Tool("lizard", "/usr/bin/lizard", range(10, 50), ["--version"], ["-{level}"], ["-d"]),
-    Tool("lz4", "/usr/bin/lz4", range(1, 13), ["--version"], ["-{level}"], ["-d"]),
-    Tool("lzf", "/usr/bin/lzf", range(1, 13), ["--help"], [], ["-d"]),
-    Tool("lzma", "/usr/bin/lzma", range(1, 10), ["--version"], ["-{level}"], ["-d"]),
-    Tool("lzop", "/usr/bin/lzop", range(1, 10), ["--version"], ["-{level}"], ["-d"]),
-    Tool("lzturbo", "/usr/bin/lzturbo", [10, 11, 12, 19, 20, 21, 22, 29, 30, 31, 32, 39, 49], ["--help"], ["-{level}"], ["-d"]),
-    Tool("xz", "/usr/bin/xz", range(1, 10), ["--version"], ["-{level}"], ["-d"]),
-    Tool("zstd", "/usr/bin/zstd", range(1, 20), ["--version"], ["-{level}"], ["-d"]),
+    Tool(
+        "cat",
+        "/usr/bin/cat",
+        [0],
+        ["--version"],
+        [],
+        []
+    ),
+    Tool(
+        "brotli",
+        "/usr/bin/brotli",
+        lrange(1, 9),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "bzip2",
+        "/usr/bin/bzip2",
+        lrange(1, 9),
+        ["--version", "--help"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "gzip",
+        "/usr/bin/gzip",
+        lrange(1, 9),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "lizard",
+        "/usr/bin/lizard",
+        lrange(10, 49),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "lz4",
+        "/usr/bin/lz4",
+        lrange(1, 12),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "lzf",
+        "/usr/bin/lzf",
+        lrange(1, 12),
+        ["--help"],
+        [],
+        ["-d"]
+    ),
+    Tool(
+        "lzma",
+        "/usr/bin/lzma",
+        lrange(1, 9),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "lzop",
+        "/usr/bin/lzop",
+        lrange(1, 9),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "lzturbo",
+        "/usr/bin/lzturbo",
+        [10, 11, 12, 19, 20, 21, 22, 29, 30, 31, 32, 39, 49],
+        ["--help"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "xz",
+        "/usr/bin/xz",
+        lrange(1, 9),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "zstd",
+        "/usr/bin/zstd",
+        lrange(1, 19),
+        ["--version"],
+        ["-{level}"],
+        ["-d"]
+    ),
+    Tool(
+        "zstd (long)",
+        "/usr/bin/zstd",
+        lrange(1, 19),
+        ["--version"],
+        ["-{level}", "--long"],
+        ["-d"]
+    ),
+    Tool(
+        "zstd (ultra)",
+        "/usr/bin/zstd",
+        lrange(1, 22),
+        ["--version"],
+        ["-{level}", "--long", "--ultra"],
+        ["-d"]
+    ),
+    Tool(
+        "zstd (fast)",
+        "/usr/bin/zstd",
+        lrange(1, 19) + [50, 100, 1000],
+        ["--version"],
+        ["--fast={level}"],
+        ["-d"]
+    ),
 ]
