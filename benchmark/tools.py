@@ -44,10 +44,10 @@ class Tool:
         return matches[0][0]
 
     def compress(self, source: IO[Any], destination: IO[Any], level: int, timeout: float) -> float:
-        return self.timed_run([self.name] + self.format_arguments(self.compression_arguments, level), source, destination, timeout)
+        return self.timed_run([self.binary] + self.format_arguments(self.compression_arguments, level), source, destination, timeout)
 
     def decompress(self, source: IO[Any], destination: IO[Any], timeout: float) -> float:
-        return self.timed_run([self.name] + self.decompression_arguments, source, destination, timeout)
+        return self.timed_run([self.binary] + self.decompression_arguments, source, destination, timeout)
 
     def timed_run(self, command: List[str], stdin: IO[Any], stdout: IO[Any], timeout: float) -> float:
         start_time = time.time()
