@@ -53,9 +53,12 @@ class Benchmark:
         file: str,
         level: int,
         check_output: bool,
+        verbose: bool,
     ) -> Union[RunResult, RunError]:
         try:
-            print(f"[{tool.identity()} ({level})]: {file}")
+            if verbose:
+                print(f"[{tool.identity()} ({level})]: {file}")
+
             sys.stdout.flush()
             return self.single_run(tool, file, level, check_output)
         except Exception as exception:
@@ -63,8 +66,11 @@ class Benchmark:
 
     def run_file(self, file: str):
         for tool in self.tools:
+            # Warmup run
+            self.protected_single_run(tool, file, level=tool.compression_levels[0], check_output=False, verbose=False)
+
             for level in tool.compression_levels:
-                yield self.protected_single_run(tool, file, level=level, check_output=True)
+                yield self.protected_single_run(tool, file, level=level, check_output=True, verbose=True)
 
     def run(self) -> BenchmarkResult:
         return BenchmarkResult(

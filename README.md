@@ -18,7 +18,6 @@ poetry run python benchmark
 
 ## TODO
 
-- [ ] Warmup runs
 - [ ] Multiple runs
 - [ ] Progress bar
 - [ ] More tools and example files
