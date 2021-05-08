@@ -66,6 +66,31 @@ class BenchmarkResult:
 
         print(tabulate(data, headers=["Tool", "RT", "CT", "DT", "Result"]))
 
+    def as_table(self, file: str) -> str:
+        data = []
+        for result in self.runs:
+            if result.file != file:
+                continue
+
+            if result.is_ok:
+                data.append([
+                    f"{result.tool.name} (v{result.tool.gather_version()}) (level {result.level})",
+                    result.compressed_size,
+                    int(result.compression_time * 1000),
+                    int(result.decompression_time * 1000),
+                    "Ok",
+                ])
+            else:
+                data.append([
+                    f"{result.tool.name} (v{result.tool.gather_version()}) (level {result.level})",
+                    "-",
+                    "-",
+                    "-",
+                    result.reason,
+                ])
+
+        return tabulate(data, headers=["Tool", "CS", "CT", "DT", "Result"])
+
     def plot_time_to_ratio(self, file, output) -> None:
         tools = defaultdict(lambda: ([], []))
         for run in self.runs:
@@ -144,3 +169,13 @@ class BenchmarkResult:
         report_path = os.path.join(directory, "report.md")
         with open(report_path, "w") as report:
             report.write(result)
+
+        report_path = os.path.join(directory, "report.txt")
+        with open(report_path, "w") as report:
+            report.write("# Ultimate compression benchmark\n\n")
+
+            for file in self.files:
+                report.write(f"## Results for {file}:\n\n")
+
+                report.write(self.as_table(file))
+                report.write("\n\n")
