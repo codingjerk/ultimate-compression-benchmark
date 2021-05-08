@@ -86,9 +86,17 @@ tools = [
     Tool(
         "brotli",
         "/usr/bin/brotli",
-        lrange(1, 9),
+        lrange(0, 11),
         ["--version"],
-        ["-{level}"],
+        ["--quality={level}"],
+        ["-d"]
+    ),
+    Tool(
+        "brotli (long)",
+        "/usr/bin/brotli",
+        lrange(0, 11),
+        ["--version"],
+        ["--quality={level}", "--lgwin=24"],
         ["-d"]
     ),
     Tool(
