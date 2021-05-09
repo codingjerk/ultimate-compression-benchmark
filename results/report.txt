@@ -1,0 +1,1172 @@
+# Ultimate compression benchmark
+
+## Results for examples/database.sql:
+
+Tool                                    CS     CT    DT  Result
+---------------------------------  -------  -----  ----  --------
+cat (v8.32) (level 0)              2968086     11    12  Ok
+brotli (v1.0.9) (level 0)          1054069     68    69  Ok
+brotli (v1.0.9) (level 1)           920728     68    69  Ok
+brotli (v1.0.9) (level 2)           882390    118    69  Ok
+brotli (v1.0.9) (level 3)           917155    168    68  Ok
+brotli (v1.0.9) (level 4)           946038    319    69  Ok
+brotli (v1.0.9) (level 5)           832967    519    69  Ok
+brotli (v1.0.9) (level 6)           814564    670    69  Ok
+brotli (v1.0.9) (level 7)           798088    871    70  Ok
+brotli (v1.0.9) (level 8)           791377   1072    69  Ok
+brotli (v1.0.9) (level 9)           786348   1524    70  Ok
+brotli (v1.0.9) (level 10)          631395   9348    69  Ok
+brotli (v1.0.9) (level 11)          594148  22796    71  Ok
+brotli (long) (v1.0.9) (level 0)   1054069     68    70  Ok
+brotli (long) (v1.0.9) (level 1)    920728     69    69  Ok
+brotli (long) (v1.0.9) (level 2)    882390    169    69  Ok
+brotli (long) (v1.0.9) (level 3)    917155    168    69  Ok
+brotli (long) (v1.0.9) (level 4)    946038    268    70  Ok
+brotli (long) (v1.0.9) (level 5)    832967    570    69  Ok
+brotli (long) (v1.0.9) (level 6)    814564    670    69  Ok
+brotli (long) (v1.0.9) (level 7)    798088    820    69  Ok
+brotli (long) (v1.0.9) (level 8)    791377   1071    69  Ok
+brotli (long) (v1.0.9) (level 9)    786348   1622    37  Ok
+brotli (long) (v1.0.9) (level 10)   631395   9751    68  Ok
+brotli (long) (v1.0.9) (level 11)   594148  22284    69  Ok
+bzip2 (v1.0.8) (level 1)            728749    619   320  Ok
+bzip2 (v1.0.8) (level 2)            726193    622   320  Ok
+bzip2 (v1.0.8) (level 3)            720014    619   370  Ok
+bzip2 (v1.0.8) (level 4)            722606    670   370  Ok
+bzip2 (v1.0.8) (level 5)            725035    672   370  Ok
+bzip2 (v1.0.8) (level 6)            720815    670   370  Ok
+bzip2 (v1.0.8) (level 7)            717863    669   370  Ok
+bzip2 (v1.0.8) (level 8)            714898    671   370  Ok
+bzip2 (v1.0.8) (level 9)            714393    670   370  Ok
+gzip (v1.10) (level 1)             1065553    168   119  Ok
+gzip (v1.10) (level 2)             1027243    220   120  Ok
+gzip (v1.10) (level 3)              989439    270   121  Ok
+gzip (v1.10) (level 4)              936356    271   122  Ok
+gzip (v1.10) (level 5)              863350    421   119  Ok
+gzip (v1.10) (level 6)              842220    569   120  Ok
+gzip (v1.10) (level 7)              837640    673    70  Ok
+gzip (v1.10) (level 8)              831319   1220    69  Ok
+gzip (v1.10) (level 9)              830180   1673    70  Ok
+lizard (v1.0.0) (level 10)         1511595     69    38  Ok
+lizard (v1.0.0) (level 11)         1468351     69    38  Ok
+lizard (v1.0.0) (level 12)         1279566    172    39  Ok
+lizard (v1.0.0) (level 13)         1230200    220    38  Ok
+lizard (v1.0.0) (level 14)         1191861    276    21  Ok
+lizard (v1.0.0) (level 15)         1165338    271    21  Ok
+lizard (v1.0.0) (level 16)         1125021    420    21  Ok
+lizard (v1.0.0) (level 17)         1091438    930    21  Ok
+lizard (v1.0.0) (level 18)         1079306   1873    21  Ok
+lizard (v1.0.0) (level 19)         1075341   2077    21  Ok
+lizard (v1.0.0) (level 20)         1480248     68    37  Ok
+lizard (v1.0.0) (level 21)         1291570    118    20  Ok
+lizard (v1.0.0) (level 22)         1232764    118    20  Ok
+lizard (v1.0.0) (level 23)         1201996    269    20  Ok
+lizard (v1.0.0) (level 24)         1136739    420    20  Ok
+lizard (v1.0.0) (level 25)         1074669    670    20  Ok
+lizard (v1.0.0) (level 26)         1023237   2425    21  Ok
+lizard (v1.0.0) (level 27)          968193   3479    20  Ok
+lizard (v1.0.0) (level 28)          967663   3529    20  Ok
+lizard (v1.0.0) (level 29)          967663   3629    20  Ok
+lizard (v1.0.0) (level 30)          989723     68    37  Ok
+lizard (v1.0.0) (level 31)          990139     68    37  Ok
+lizard (v1.0.0) (level 32)          878522    118    36  Ok
+lizard (v1.0.0) (level 33)          879370    118    37  Ok
+lizard (v1.0.0) (level 34)          859783    168    36  Ok
+lizard (v1.0.0) (level 35)          845927    218    36  Ok
+lizard (v1.0.0) (level 36)          835695    219    37  Ok
+lizard (v1.0.0) (level 37)          849354    369    37  Ok
+lizard (v1.0.0) (level 38)          832092    870    37  Ok
+lizard (v1.0.0) (level 39)          843764   2275    43  Ok
+lizard (v1.0.0) (level 40)         1083817     70    39  Ok
+lizard (v1.0.0) (level 41)          942901    120    38  Ok
+lizard (v1.0.0) (level 42)          912398    169    37  Ok
+lizard (v1.0.0) (level 43)          850939    420    39  Ok
+lizard (v1.0.0) (level 44)          814970    570    39  Ok
+lizard (v1.0.0) (level 45)          799564    973    38  Ok
+lizard (v1.0.0) (level 46)          807521   1576    37  Ok
+lizard (v1.0.0) (level 47)          812140   2728    37  Ok
+lizard (v1.0.0) (level 48)          761614   3580    37  Ok
+lizard (v1.0.0) (level 49)          761564   3780    37  Ok
+lz4 (v1.9.3) (level 1)             1502835     36    20  Ok
+lz4 (v1.9.3) (level 2)             1502835     36    20  Ok
+lz4 (v1.9.3) (level 3)             1175733    168    21  Ok
+lz4 (v1.9.3) (level 4)             1141490    218    20  Ok
+lz4 (v1.9.3) (level 5)             1117372    319    20  Ok
+lz4 (v1.9.3) (level 6)             1102186    419    20  Ok
+lz4 (v1.9.3) (level 7)             1094264    519    20  Ok
+lz4 (v1.9.3) (level 8)             1090559    670    20  Ok
+lz4 (v1.9.3) (level 9)             1089080    770    20  Ok
+lz4 (v1.9.3) (level 10)            1081585   1171    20  Ok
+lz4 (v1.9.3) (level 11)            1075061   2174    21  Ok
+lz4 (v1.9.3) (level 12)            1074335   1372    20  Ok
+lzf (vNone) (level 1)              1429482     68    36  Ok
+lzf (vNone) (level 2)              1429482     68    36  Ok
+lzf (vNone) (level 3)              1429482     68    36  Ok
+lzf (vNone) (level 4)              1429482     68    37  Ok
+lzf (vNone) (level 5)              1429482     68    37  Ok
+lzf (vNone) (level 6)              1429482     68    37  Ok
+lzf (vNone) (level 7)              1429482     70    37  Ok
+lzf (vNone) (level 8)              1429482     68    37  Ok
+lzf (vNone) (level 9)              1429482     68    37  Ok
+lzf (vNone) (level 10)             1429482     68    37  Ok
+lzf (vNone) (level 11)             1429482     68    37  Ok
+lzf (vNone) (level 12)             1429482     68    38  Ok
+lzma (v5.2.5) (level 1)             756117    722   220  Ok
+lzma (v5.2.5) (level 2)             728901   1121   169  Ok
+lzma (v5.2.5) (level 3)             718537   1573   169  Ok
+lzma (v5.2.5) (level 4)             539774   3982   169  Ok
+lzma (v5.2.5) (level 5)             529750   4281   169  Ok
+lzma (v5.2.5) (level 6)             528663   4633   169  Ok
+lzma (v5.2.5) (level 7)             528663   4533   169  Ok
+lzma (v5.2.5) (level 8)             528663   4483   169  Ok
+lzma (v5.2.5) (level 9)             528663   4583   169  Ok
+lzop (v1.04) (level 1)             1384104     35    36  Ok
+lzop (v1.04) (level 2)             1380833     35    36  Ok
+lzop (v1.04) (level 3)             1380833     35    36  Ok
+lzop (v1.04) (level 4)             1380833     68    37  Ok
+lzop (v1.04) (level 5)             1380833     35    36  Ok
+lzop (v1.04) (level 6)             1380833     35    36  Ok
+lzop (v1.04) (level 7)             1124444    971    37  Ok
+lzop (v1.04) (level 8)             1110887   3128    37  Ok
+lzop (v1.04) (level 9)             1110620   3327    37  Ok
+lzturbo (v1.2) (level 10)          1514940     68    20  Ok
+lzturbo (v1.2) (level 11)          1370383    118    20  Ok
+lzturbo (v1.2) (level 12)          1311026    168    20  Ok
+lzturbo (v1.2) (level 19)          1074688   3478    20  Ok
+lzturbo (v1.2) (level 20)          1367863     68    37  Ok
+lzturbo (v1.2) (level 21)          1243687    118    37  Ok
+lzturbo (v1.2) (level 22)          1212817    269    37  Ok
+lzturbo (v1.2) (level 29)           976829   4081    37  Ok
+lzturbo (v1.2) (level 30)          1001661    118    68  Ok
+lzturbo (v1.2) (level 31)           918006    118    69  Ok
+lzturbo (v1.2) (level 32)           836039    369    69  Ok
+lzturbo (v1.2) (level 39)           624009   4332    36  Ok
+lzturbo (v1.2) (level 49)           525753   5986   169  Ok
+xz (v5.2.5) (level 1)               756280    720   219  Ok
+xz (v5.2.5) (level 2)               729056   1122   219  Ok
+xz (v5.2.5) (level 3)               718688   1573   169  Ok
+xz (v5.2.5) (level 4)               539900   4081   169  Ok
+xz (v5.2.5) (level 5)               529872   4282   169  Ok
+xz (v5.2.5) (level 6)               528788   4533   169  Ok
+xz (v5.2.5) (level 7)               528788   4533   219  Ok
+xz (v5.2.5) (level 8)               528788   4534   170  Ok
+xz (v5.2.5) (level 9)               528788   4533   169  Ok
+zstd (v1.4.9) (level 1)             840224     68    37  Ok
+zstd (v1.4.9) (level 2)             904574    118    37  Ok
+zstd (v1.4.9) (level 3)             906460    118    37  Ok
+zstd (v1.4.9) (level 4)             910619    118    36  Ok
+zstd (v1.4.9) (level 5)             923059    169    36  Ok
+zstd (v1.4.9) (level 6)             912103    168    36  Ok
+zstd (v1.4.9) (level 7)             850145    218    37  Ok
+zstd (v1.4.9) (level 8)             792523    319    37  Ok
+zstd (v1.4.9) (level 9)             784820    419    37  Ok
+zstd (v1.4.9) (level 10)            778438    469    37  Ok
+zstd (v1.4.9) (level 11)            774739    570    37  Ok
+zstd (v1.4.9) (level 12)            769314    871    37  Ok
+zstd (v1.4.9) (level 13)            754552   1222    37  Ok
+zstd (v1.4.9) (level 14)            750893   1323    36  Ok
+zstd (v1.4.9) (level 15)            741018   1673    36  Ok
+zstd (v1.4.9) (level 16)            647120   2878    37  Ok
+zstd (v1.4.9) (level 17)            646867   3229    37  Ok
+zstd (v1.4.9) (level 18)            648383   4182    36  Ok
+zstd (v1.4.9) (level 19)            648066   4432    37  Ok
+zstd (long) (v1.4.9) (level 1)      837553    118    37  Ok
+zstd (long) (v1.4.9) (level 2)      900810    118    37  Ok
+zstd (long) (v1.4.9) (level 3)      906459    118    37  Ok
+zstd (long) (v1.4.9) (level 4)      917089    118    37  Ok
+zstd (long) (v1.4.9) (level 5)      930129    168    37  Ok
+zstd (long) (v1.4.9) (level 6)      909550    219    37  Ok
+zstd (long) (v1.4.9) (level 7)      848359    268    37  Ok
+zstd (long) (v1.4.9) (level 8)      791184    319    37  Ok
+zstd (long) (v1.4.9) (level 9)      783758    419    37  Ok
+zstd (long) (v1.4.9) (level 10)     777929    520    37  Ok
+zstd (long) (v1.4.9) (level 11)     774233    620    36  Ok
+zstd (long) (v1.4.9) (level 12)     769053    821    37  Ok
+zstd (long) (v1.4.9) (level 13)     754470   1222    37  Ok
+zstd (long) (v1.4.9) (level 14)     750864   1322    37  Ok
+zstd (long) (v1.4.9) (level 15)     741032   1573    37  Ok
+zstd (long) (v1.4.9) (level 16)     647092   2878    36  Ok
+zstd (long) (v1.4.9) (level 17)     646786   3280    37  Ok
+zstd (long) (v1.4.9) (level 18)     648414   4182    37  Ok
+zstd (long) (v1.4.9) (level 19)     648085   4433    36  Ok
+zstd (ultra) (v1.4.9) (level 1)     837553    118    37  Ok
+zstd (ultra) (v1.4.9) (level 2)     900810    118    37  Ok
+zstd (ultra) (v1.4.9) (level 3)     906459    118    37  Ok
+zstd (ultra) (v1.4.9) (level 4)     917089    118    36  Ok
+zstd (ultra) (v1.4.9) (level 5)     930129    168    36  Ok
+zstd (ultra) (v1.4.9) (level 6)     909550    218    37  Ok
+zstd (ultra) (v1.4.9) (level 7)     848359    269    37  Ok
+zstd (ultra) (v1.4.9) (level 8)     791184    319    37  Ok
+zstd (ultra) (v1.4.9) (level 9)     783758    419    36  Ok
+zstd (ultra) (v1.4.9) (level 10)    777929    520    37  Ok
+zstd (ultra) (v1.4.9) (level 11)    774233    570    37  Ok
+zstd (ultra) (v1.4.9) (level 12)    769053    821    36  Ok
+zstd (ultra) (v1.4.9) (level 13)    754470   1222    38  Ok
+zstd (ultra) (v1.4.9) (level 14)    750864   1323    37  Ok
+zstd (ultra) (v1.4.9) (level 15)    741032   1623    37  Ok
+zstd (ultra) (v1.4.9) (level 16)    647092   2978    36  Ok
+zstd (ultra) (v1.4.9) (level 17)    646786   3329    37  Ok
+zstd (ultra) (v1.4.9) (level 18)    648414   4182    37  Ok
+zstd (ultra) (v1.4.9) (level 19)    648085   4382    37  Ok
+zstd (ultra) (v1.4.9) (level 20)    648085   4433    37  Ok
+zstd (ultra) (v1.4.9) (level 21)    648055   4634    37  Ok
+zstd (ultra) (v1.4.9) (level 22)    647963   5234    39  Ok
+zstd (fast) (v1.4.9) (level 1)     1207042     68    37  Ok
+zstd (fast) (v1.4.9) (level 2)     1188317     68    37  Ok
+zstd (fast) (v1.4.9) (level 3)     1206384     68    20  Ok
+zstd (fast) (v1.4.9) (level 4)     1206900     68    20  Ok
+zstd (fast) (v1.4.9) (level 5)     1261763     68    21  Ok
+zstd (fast) (v1.4.9) (level 6)     1386560     68    20  Ok
+zstd (fast) (v1.4.9) (level 7)     1495910     68    20  Ok
+zstd (fast) (v1.4.9) (level 8)     1602333     68    20  Ok
+zstd (fast) (v1.4.9) (level 9)     1831207     68    20  Ok
+zstd (fast) (v1.4.9) (level 10)    1844919     68    20  Ok
+zstd (fast) (v1.4.9) (level 11)    2002612     68    20  Ok
+zstd (fast) (v1.4.9) (level 12)    2187633     68    20  Ok
+zstd (fast) (v1.4.9) (level 13)    2351426     36    21  Ok
+zstd (fast) (v1.4.9) (level 14)    2528522     36    20  Ok
+zstd (fast) (v1.4.9) (level 15)    2675344     36    21  Ok
+zstd (fast) (v1.4.9) (level 16)    2364938     36    21  Ok
+zstd (fast) (v1.4.9) (level 17)    2219359     36    21  Ok
+zstd (fast) (v1.4.9) (level 18)    2147113     36    21  Ok
+zstd (fast) (v1.4.9) (level 19)    2151702     36    20  Ok
+zstd (fast) (v1.4.9) (level 50)    2618401     36    21  Ok
+zstd (fast) (v1.4.9) (level 100)   2748102     36    21  Ok
+zstd (fast) (v1.4.9) (level 1000)  2968165     20    21  Ok
+
+## Results for examples/database.csv:
+
+Tool                                     CS      CT    DT  Result
+---------------------------------  --------  ------  ----  --------
+cat (v8.32) (level 0)              59392986     119   120  Ok
+brotli (v1.0.9) (level 0)           7292500     319   370  Ok
+brotli (v1.0.9) (level 1)           5542663     420   420  Ok
+brotli (v1.0.9) (level 2)           4408093     870   319  Ok
+brotli (v1.0.9) (level 3)           4259378    1022   320  Ok
+brotli (v1.0.9) (level 4)           4259038    1773   269  Ok
+brotli (v1.0.9) (level 5)           3678249    3228   272  Ok
+brotli (v1.0.9) (level 6)           3640781    4130   269  Ok
+brotli (v1.0.9) (level 7)           3579293    5835   270  Ok
+brotli (v1.0.9) (level 8)           3537585    8494   270  Ok
+brotli (v1.0.9) (level 9)           3288788   13107   270  Ok
+brotli (v1.0.9) (level 10)          2543981  194981   322  Ok
+brotli (v1.0.9) (level 11)          2371933  535293   321  Ok
+brotli (long) (v1.0.9) (level 0)    7292500     370   370  Ok
+brotli (long) (v1.0.9) (level 1)    5542663     420   420  Ok
+brotli (long) (v1.0.9) (level 2)    4408093     921   372  Ok
+brotli (long) (v1.0.9) (level 3)    4259378    1122   370  Ok
+brotli (long) (v1.0.9) (level 4)    4259038    1874   320  Ok
+brotli (long) (v1.0.9) (level 5)    3678249    3535   321  Ok
+brotli (long) (v1.0.9) (level 6)    3640781    4484   270  Ok
+brotli (long) (v1.0.9) (level 7)    3579293    6488   270  Ok
+brotli (long) (v1.0.9) (level 8)    3537585    9951   322  Ok
+brotli (long) (v1.0.9) (level 9)    3288788   14465   271  Ok
+brotli (long) (v1.0.9) (level 10)   2543981  205998   320  Ok
+brotli (long) (v1.0.9) (level 11)   2371933  524347   270  Ok
+bzip2 (v1.0.8) (level 1)            3140159   17133  2678  Ok
+bzip2 (v1.0.8) (level 2)            3198738   18124  2929  Ok
+bzip2 (v1.0.8) (level 3)            2891102   18626  3079  Ok
+bzip2 (v1.0.8) (level 4)            2831627   19330  3078  Ok
+bzip2 (v1.0.8) (level 5)            2822423   19833  3330  Ok
+bzip2 (v1.0.8) (level 6)            2715259   20032  2927  Ok
+bzip2 (v1.0.8) (level 7)            2623106   18674  2928  Ok
+bzip2 (v1.0.8) (level 8)            2608192   18776  3028  Ok
+bzip2 (v1.0.8) (level 9)            2624003   19378  3078  Ok
+gzip (v1.10) (level 1)              7314763    1573   871  Ok
+gzip (v1.10) (level 2)              7244970    1723   872  Ok
+gzip (v1.10) (level 3)              7039713    2678   872  Ok
+gzip (v1.10) (level 4)              6274230    2176   873  Ok
+gzip (v1.10) (level 5)              6250346    3128   871  Ok
+gzip (v1.10) (level 6)              6174272    6690   823  Ok
+gzip (v1.10) (level 7)              5796717    9500   822  Ok
+gzip (v1.10) (level 8)              5277929   37488   772  Ok
+gzip (v1.10) (level 9)              5379065   62164   773  Ok
+lizard (v1.0.0) (level 10)         11613819     320   220  Ok
+lizard (v1.0.0) (level 11)         11606606     320   221  Ok
+lizard (v1.0.0) (level 12)         10395304    1025   219  Ok
+lizard (v1.0.0) (level 13)          9985169    1825   222  Ok
+lizard (v1.0.0) (level 14)          9732029    2325   219  Ok
+lizard (v1.0.0) (level 15)          9554467    3079   220  Ok
+lizard (v1.0.0) (level 16)          9662624    4182   219  Ok
+lizard (v1.0.0) (level 17)          9232609   30464   219  Ok
+lizard (v1.0.0) (level 18)          8826674   44911   219  Ok
+lizard (v1.0.0) (level 19)          8610225  103752   220  Ok
+lizard (v1.0.0) (level 20)         11989077     370   270  Ok
+lizard (v1.0.0) (level 21)         10749087     622   220  Ok
+lizard (v1.0.0) (level 22)         10749318     670   270  Ok
+lizard (v1.0.0) (level 23)          7950580    2928   170  Ok
+lizard (v1.0.0) (level 24)          7901035    3729   170  Ok
+lizard (v1.0.0) (level 25)          7918429    5436   171  Ok
+lizard (v1.0.0) (level 26)          7090164   44708   169  Ok
+lizard (v1.0.0) (level 27)          6405510  109903   169  Ok
+lizard (v1.0.0) (level 28)          6367715  309526   169  Ok
+lizard (v1.0.0) (level 29)          6367715  312801   170  Ok
+lizard (v1.0.0) (level 30)          7159423     369   270  Ok
+lizard (v1.0.0) (level 31)          7145651     419   270  Ok
+lizard (v1.0.0) (level 32)          6147158    1024   269  Ok
+lizard (v1.0.0) (level 33)          6136115    1021   270  Ok
+lizard (v1.0.0) (level 34)          6142560    1724   269  Ok
+lizard (v1.0.0) (level 35)          6065138    2126   219  Ok
+lizard (v1.0.0) (level 36)          6013267    2877   219  Ok
+lizard (v1.0.0) (level 37)          5889100    3879   219  Ok
+lizard (v1.0.0) (level 38)          5854659   26549   219  Ok
+lizard (v1.0.0) (level 39)          5533078   92896   269  Ok
+lizard (v1.0.0) (level 40)          8765921     372   270  Ok
+lizard (v1.0.0) (level 41)          8035396     620   219  Ok
+lizard (v1.0.0) (level 42)          8035344     620   220  Ok
+lizard (v1.0.0) (level 43)          4683536    2927   220  Ok
+lizard (v1.0.0) (level 44)          4762872    4282   272  Ok
+lizard (v1.0.0) (level 45)          4858216    6595   219  Ok
+lizard (v1.0.0) (level 46)          3881418   23539   219  Ok
+lizard (v1.0.0) (level 47)          4144055   46462   219  Ok
+lizard (v1.0.0) (level 48)          4274713  106296   219  Ok
+lizard (v1.0.0) (level 49)          4320385  317615   219  Ok
+lz4 (v1.9.3) (level 1)             11594464     269   169  Ok
+lz4 (v1.9.3) (level 2)             11594464     269   169  Ok
+lz4 (v1.9.3) (level 3)             10034201    1523   169  Ok
+lz4 (v1.9.3) (level 4)              9867607    2225   169  Ok
+lz4 (v1.9.3) (level 5)              9560195    3328   170  Ok
+lz4 (v1.9.3) (level 6)              9394359    5234   169  Ok
+lz4 (v1.9.3) (level 7)              9303115    8497   169  Ok
+lz4 (v1.9.3) (level 8)              9222857   13659   169  Ok
+lz4 (v1.9.3) (level 9)              9179578   21685   170  Ok
+lz4 (v1.9.3) (level 10)             8762664   16719   169  Ok
+lz4 (v1.9.3) (level 11)             8590964   48914   169  Ok
+lz4 (v1.9.3) (level 12)             8563777   70446   170  Ok
+lzf (vNone) (level 1)              11788023     321   269  Ok
+lzf (vNone) (level 2)              11788023     324   272  Ok
+lzf (vNone) (level 3)              11788023     322   270  Ok
+lzf (vNone) (level 4)              11788023     320   270  Ok
+lzf (vNone) (level 5)              11788023     322   269  Ok
+lzf (vNone) (level 6)              11788023     375   271  Ok
+lzf (vNone) (level 7)              11788023     371   270  Ok
+lzf (vNone) (level 8)              11788023     320   270  Ok
+lzf (vNone) (level 9)              11788023     372   271  Ok
+lzf (vNone) (level 10)             11788023     371   270  Ok
+lzf (vNone) (level 11)             11788023     321   269  Ok
+lzf (vNone) (level 12)             11788023     320   270  Ok
+lzma (v5.2.5) (level 1)             3124348    4033   971  Ok
+lzma (v5.2.5) (level 2)             3170952    5988   972  Ok
+lzma (v5.2.5) (level 3)             3073070    8094   921  Ok
+lzma (v5.2.5) (level 4)             3404942   18175   874  Ok
+lzma (v5.2.5) (level 5)             2802444   36079   721  Ok
+lzma (v5.2.5) (level 6)             1988395  110905   771  Ok
+lzma (v5.2.5) (level 7)             1949218  118563   823  Ok
+lzma (v5.2.5) (level 8)             1966606  130426   821  Ok
+lzma (v5.2.5) (level 9)             1966606  133838   871  Ok
+lzop (v1.04) (level 1)             12223386     320   320  Ok
+lzop (v1.04) (level 2)             12223623     321   319  Ok
+lzop (v1.04) (level 3)             12223623     371   322  Ok
+lzop (v1.04) (level 4)             12223623     323   320  Ok
+lzop (v1.04) (level 5)             12223623     321   320  Ok
+lzop (v1.04) (level 6)             12223623     319   320  Ok
+lzop (v1.04) (level 7)              9182468   10654   270  Ok
+lzop (v1.04) (level 8)              8750227   84940   272  Ok
+lzop (v1.04) (level 9)              8820115  144367   271  Ok
+lzturbo (v1.2) (level 10)          15497397     120   121  Ok
+lzturbo (v1.2) (level 11)          11894506     521   220  Ok
+lzturbo (v1.2) (level 12)          10292788     620   170  Ok
+lzturbo (v1.2) (level 19)           8559281   88433   169  Ok
+lzturbo (v1.2) (level 20)          11844618     118   119  Ok
+lzturbo (v1.2) (level 21)           9718489     369   220  Ok
+lzturbo (v1.2) (level 22)           8843956     670   219  Ok
+lzturbo (v1.2) (level 29)           6371606  114528   219  Ok
+lzturbo (v1.2) (level 30)           6204053     169   119  Ok
+lzturbo (v1.2) (level 31)           5125792     622   421  Ok
+lzturbo (v1.2) (level 32)           4705391    1071   373  Ok
+lzturbo (v1.2) (level 39)           2138711  135083   325  Ok
+lzturbo (v1.2) (level 49)           1544521  170559   721  Ok
+xz (v5.2.5) (level 1)               3124904    4132  1172  Ok
+xz (v5.2.5) (level 2)               3171516    6088  1172  Ok
+xz (v5.2.5) (level 3)               3073628    8395  1123  Ok
+xz (v5.2.5) (level 4)               3405536   18778  1074  Ok
+xz (v5.2.5) (level 5)               2802952   40697   973  Ok
+xz (v5.2.5) (level 6)               1988808  127223  1022  Ok
+xz (v5.2.5) (level 7)               1949620  135396   972  Ok
+xz (v5.2.5) (level 8)               1967008  142018  1074  Ok
+xz (v5.2.5) (level 9)               1967008  144969  1123  Ok
+zstd (v1.4.9) (level 1)             4298896     471   322  Ok
+zstd (v1.4.9) (level 2)             4421865     520   321  Ok
+zstd (v1.4.9) (level 3)             4299789     525   320  Ok
+zstd (v1.4.9) (level 4)             4296889     525   320  Ok
+zstd (v1.4.9) (level 5)             4016874     871   273  Ok
+zstd (v1.4.9) (level 6)             3969377    1026   270  Ok
+zstd (v1.4.9) (level 7)             3760613    1576   271  Ok
+zstd (v1.4.9) (level 8)             3712885    1975   271  Ok
+zstd (v1.4.9) (level 9)             3703738    3035   271  Ok
+zstd (v1.4.9) (level 10)            3704493    3129   270  Ok
+zstd (v1.4.9) (level 11)            3705006    3184   270  Ok
+zstd (v1.4.9) (level 12)            3661988    5787   271  Ok
+zstd (v1.4.9) (level 13)            3621442   14967   269  Ok
+zstd (v1.4.9) (level 14)            3623613   15366   281  Ok
+zstd (v1.4.9) (level 15)            3521114   25497   269  Ok
+zstd (v1.4.9) (level 16)            3067431   65932   270  Ok
+zstd (v1.4.9) (level 17)            2888695   68082   269  Ok
+zstd (v1.4.9) (level 18)            2661601  140601   270  Ok
+zstd (v1.4.9) (level 19)            2472688  208723   269  Ok
+zstd (long) (v1.4.9) (level 1)      4453514     825   370  Ok
+zstd (long) (v1.4.9) (level 2)      4582955     771   371  Ok
+zstd (long) (v1.4.9) (level 3)      4441885     821   376  Ok
+zstd (long) (v1.4.9) (level 4)      4441031     822   370  Ok
+zstd (long) (v1.4.9) (level 5)      4160982    1173   372  Ok
+zstd (long) (v1.4.9) (level 6)      4091029    1225   370  Ok
+zstd (long) (v1.4.9) (level 7)      3924586    1876   372  Ok
+zstd (long) (v1.4.9) (level 8)      3892222    2325   320  Ok
+zstd (long) (v1.4.9) (level 9)      3890081    3333   321  Ok
+zstd (long) (v1.4.9) (level 10)     3841093    3380   324  Ok
+zstd (long) (v1.4.9) (level 11)     3831528    3480   321  Ok
+zstd (long) (v1.4.9) (level 12)     3791426    6140   321  Ok
+zstd (long) (v1.4.9) (level 13)     3749577   15268   320  Ok
+zstd (long) (v1.4.9) (level 14)     3747307   15818   321  Ok
+zstd (long) (v1.4.9) (level 15)     3645821   25149   319  Ok
+zstd (long) (v1.4.9) (level 16)     3073644   65973   321  Ok
+zstd (long) (v1.4.9) (level 17)     2936864   67430   324  Ok
+zstd (long) (v1.4.9) (level 18)     2667527  138448   322  Ok
+zstd (long) (v1.4.9) (level 19)     2476591  197639   321  Ok
+zstd (ultra) (v1.4.9) (level 1)     4453514     721   372  Ok
+zstd (ultra) (v1.4.9) (level 2)     4582955     773   371  Ok
+zstd (ultra) (v1.4.9) (level 3)     4441885     772   370  Ok
+zstd (ultra) (v1.4.9) (level 4)     4441031     774   370  Ok
+zstd (ultra) (v1.4.9) (level 5)     4160982    1073   370  Ok
+zstd (ultra) (v1.4.9) (level 6)     4091029    1274   371  Ok
+zstd (ultra) (v1.4.9) (level 7)     3924586    1876   319  Ok
+zstd (ultra) (v1.4.9) (level 8)     3892222    2275   321  Ok
+zstd (ultra) (v1.4.9) (level 9)     3890081    3431   321  Ok
+zstd (ultra) (v1.4.9) (level 10)    3841093    3430   321  Ok
+zstd (ultra) (v1.4.9) (level 11)    3831528    3480   320  Ok
+zstd (ultra) (v1.4.9) (level 12)    3791426    6290   320  Ok
+zstd (ultra) (v1.4.9) (level 13)    3749577   15367   321  Ok
+zstd (ultra) (v1.4.9) (level 14)    3747307   15920   320  Ok
+zstd (ultra) (v1.4.9) (level 15)    3645821   25505   321  Ok
+zstd (ultra) (v1.4.9) (level 16)    3073644   66074   320  Ok
+zstd (ultra) (v1.4.9) (level 17)    2936864   67130   320  Ok
+zstd (ultra) (v1.4.9) (level 18)    2667527  119782   269  Ok
+zstd (ultra) (v1.4.9) (level 19)    2476591  156183   271  Ok
+zstd (ultra) (v1.4.9) (level 20)    2474382  163759   323  Ok
+zstd (ultra) (v1.4.9) (level 21)    2473951  198128   320  Ok
+zstd (ultra) (v1.4.9) (level 22)    2409262  386476   322  Ok
+zstd (fast) (v1.4.9) (level 1)      4977519     470   321  Ok
+zstd (fast) (v1.4.9) (level 2)      4979619     471   321  Ok
+zstd (fast) (v1.4.9) (level 3)      4979602     474   321  Ok
+zstd (fast) (v1.4.9) (level 4)      4985930     472   320  Ok
+zstd (fast) (v1.4.9) (level 5)      4985201     473   269  Ok
+zstd (fast) (v1.4.9) (level 6)      4989205     471   320  Ok
+zstd (fast) (v1.4.9) (level 7)      4993499     471   271  Ok
+zstd (fast) (v1.4.9) (level 8)      5000284     470   322  Ok
+zstd (fast) (v1.4.9) (level 9)      5001743     476   320  Ok
+zstd (fast) (v1.4.9) (level 10)     5007539     471   323  Ok
+zstd (fast) (v1.4.9) (level 11)     5007215     473   320  Ok
+zstd (fast) (v1.4.9) (level 12)     5010863     471   272  Ok
+zstd (fast) (v1.4.9) (level 13)     5011049     469   322  Ok
+zstd (fast) (v1.4.9) (level 14)     5020425     472   320  Ok
+zstd (fast) (v1.4.9) (level 15)     5019669     471   323  Ok
+zstd (fast) (v1.4.9) (level 16)     5017964     473   322  Ok
+zstd (fast) (v1.4.9) (level 17)     5017777     473   321  Ok
+zstd (fast) (v1.4.9) (level 18)     5021602     472   320  Ok
+zstd (fast) (v1.4.9) (level 19)     5021170     475   338  Ok
+zstd (fast) (v1.4.9) (level 50)     5126525     472   320  Ok
+zstd (fast) (v1.4.9) (level 100)    5257036     470   322  Ok
+zstd (fast) (v1.4.9) (level 1000)   7852619     470   322  Ok
+
+## Results for examples/history.json:
+
+Tool                                    CS     CT    DT  Result
+---------------------------------  -------  -----  ----  --------
+cat (v8.32) (level 0)              9728479     24    37  Ok
+brotli (v1.0.9) (level 0)          2432617    172   170  Ok
+brotli (v1.0.9) (level 1)          2251811    172   173  Ok
+brotli (v1.0.9) (level 2)          2075816    371   171  Ok
+brotli (v1.0.9) (level 3)          2039999    422   171  Ok
+brotli (v1.0.9) (level 4)          1959701    872   124  Ok
+brotli (v1.0.9) (level 5)          1844241   1378   122  Ok
+brotli (v1.0.9) (level 6)          1785348   1677   120  Ok
+brotli (v1.0.9) (level 7)          1727258   2329   119  Ok
+brotli (v1.0.9) (level 8)          1699687   3279   120  Ok
+brotli (v1.0.9) (level 9)          1679735   4533   123  Ok
+brotli (v1.0.9) (level 10)         1528110  32322   122  Ok
+brotli (v1.0.9) (level 11)         1505730  74752   121  Ok
+brotli (long) (v1.0.9) (level 0)   2432617    169   172  Ok
+brotli (long) (v1.0.9) (level 1)   2251811    168   171  Ok
+brotli (long) (v1.0.9) (level 2)   2075816    371   172  Ok
+brotli (long) (v1.0.9) (level 3)   2039999    420   170  Ok
+brotli (long) (v1.0.9) (level 4)   1959701    821   120  Ok
+brotli (long) (v1.0.9) (level 5)   1844241   1380   121  Ok
+brotli (long) (v1.0.9) (level 6)   1785348   1724   120  Ok
+brotli (long) (v1.0.9) (level 7)   1727258   2477   120  Ok
+brotli (long) (v1.0.9) (level 8)   1699687   3431   121  Ok
+brotli (long) (v1.0.9) (level 9)   1679735   4787   119  Ok
+brotli (long) (v1.0.9) (level 10)  1528110  31769   122  Ok
+brotli (long) (v1.0.9) (level 11)  1505730  74249   119  Ok
+bzip2 (v1.0.8) (level 1)           1908902   3030   972  Ok
+bzip2 (v1.0.8) (level 2)           1748647   3279  1073  Ok
+bzip2 (v1.0.8) (level 3)           1670327   3480  1124  Ok
+bzip2 (v1.0.8) (level 4)           1622101   3631  1124  Ok
+bzip2 (v1.0.8) (level 5)           1584369   3734  1175  Ok
+bzip2 (v1.0.8) (level 6)           1558449   3883  1227  Ok
+bzip2 (v1.0.8) (level 7)           1533585   3984  1225  Ok
+bzip2 (v1.0.8) (level 8)           1519204   4184  1276  Ok
+bzip2 (v1.0.8) (level 9)           1501510   4137  1273  Ok
+gzip (v1.10) (level 1)             2571117    470   222  Ok
+gzip (v1.10) (level 2)             2482125    522   221  Ok
+gzip (v1.10) (level 3)             2417818    620   222  Ok
+gzip (v1.10) (level 4)             2280404    722   219  Ok
+gzip (v1.10) (level 5)             2216478    921   223  Ok
+gzip (v1.10) (level 6)             2188051   1224   219  Ok
+gzip (v1.10) (level 7)             2182159   1323   224  Ok
+gzip (v1.10) (level 8)             2166281   1627   221  Ok
+gzip (v1.10) (level 9)             2166154   1827   221  Ok
+lizard (v1.0.0) (level 10)         3324400    170    73  Ok
+lizard (v1.0.0) (level 11)         2956522    221    71  Ok
+lizard (v1.0.0) (level 12)         2663409    371    71  Ok
+lizard (v1.0.0) (level 13)         2589393    576    70  Ok
+lizard (v1.0.0) (level 14)         2547551    620    72  Ok
+lizard (v1.0.0) (level 15)         2524335    726    70  Ok
+lizard (v1.0.0) (level 16)         2444636    922    71  Ok
+lizard (v1.0.0) (level 17)         2422394   1474    69  Ok
+lizard (v1.0.0) (level 18)         2410985   9598    72  Ok
+lizard (v1.0.0) (level 19)         2408197  10956    71  Ok
+lizard (v1.0.0) (level 20)         3059739    170    71  Ok
+lizard (v1.0.0) (level 21)         2895499    272    69  Ok
+lizard (v1.0.0) (level 22)         2768445    372    72  Ok
+lizard (v1.0.0) (level 23)         2600758    824    69  Ok
+lizard (v1.0.0) (level 24)         2506608   1232    70  Ok
+lizard (v1.0.0) (level 25)         2375141   2077    70  Ok
+lizard (v1.0.0) (level 26)         2391494   6339    70  Ok
+lizard (v1.0.0) (level 27)         2318182   8094    72  Ok
+lizard (v1.0.0) (level 28)         2214593  28759    71  Ok
+lizard (v1.0.0) (level 29)         2214593  28511    71  Ok
+lizard (v1.0.0) (level 30)         2727964    172    70  Ok
+lizard (v1.0.0) (level 31)         2761338    220    69  Ok
+lizard (v1.0.0) (level 32)         2561155    321    70  Ok
+lizard (v1.0.0) (level 33)         2517113    370    69  Ok
+lizard (v1.0.0) (level 34)         2451349    570    72  Ok
+lizard (v1.0.0) (level 35)         2417853    675    69  Ok
+lizard (v1.0.0) (level 36)         2396398    774    70  Ok
+lizard (v1.0.0) (level 37)         2267409    975    69  Ok
+lizard (v1.0.0) (level 38)         2245615   1424    71  Ok
+lizard (v1.0.0) (level 39)         2177843  10903    69  Ok
+lizard (v1.0.0) (level 40)         2455473    219    71  Ok
+lizard (v1.0.0) (level 41)         2336698    269    71  Ok
+lizard (v1.0.0) (level 42)         2268597    424    69  Ok
+lizard (v1.0.0) (level 43)         2153737    872    71  Ok
+lizard (v1.0.0) (level 44)         2089595   1326    69  Ok
+lizard (v1.0.0) (level 45)         2047340   2126    71  Ok
+lizard (v1.0.0) (level 46)         2050940   4234    70  Ok
+lizard (v1.0.0) (level 47)         2053797   6691    70  Ok
+lizard (v1.0.0) (level 48)         1994191   8345    72  Ok
+lizard (v1.0.0) (level 49)         1895231  29615    69  Ok
+lz4 (v1.9.3) (level 1)             3321243    121    71  Ok
+lz4 (v1.9.3) (level 2)             3321243    120    69  Ok
+lz4 (v1.9.3) (level 3)             2487857    471    70  Ok
+lz4 (v1.9.3) (level 4)             2449428    573    70  Ok
+lz4 (v1.9.3) (level 5)             2432109    670    71  Ok
+lz4 (v1.9.3) (level 6)             2425029    774    69  Ok
+lz4 (v1.9.3) (level 7)             2421948    874    71  Ok
+lz4 (v1.9.3) (level 8)             2420230    973    69  Ok
+lz4 (v1.9.3) (level 9)             2419418   1123    71  Ok
+lz4 (v1.9.3) (level 10)            2425512   1375    70  Ok
+lz4 (v1.9.3) (level 11)            2405999   2429    69  Ok
+lz4 (v1.9.3) (level 12)            2405167   2683    72  Ok
+lzf (vNone) (level 1)              3495602    170   122  Ok
+lzf (vNone) (level 2)              3495602    172   120  Ok
+lzf (vNone) (level 3)              3495602    171   122  Ok
+lzf (vNone) (level 4)              3495602    172   119  Ok
+lzf (vNone) (level 5)              3495602    171   121  Ok
+lzf (vNone) (level 6)              3495602    176   119  Ok
+lzf (vNone) (level 7)              3495602    169   122  Ok
+lzf (vNone) (level 8)              3495602    171   122  Ok
+lzf (vNone) (level 9)              3495602    221   123  Ok
+lzf (vNone) (level 10)             3495602    174   119  Ok
+lzf (vNone) (level 11)             3495602    169   122  Ok
+lzf (vNone) (level 12)             3495602    172   120  Ok
+lzma (v5.2.5) (level 1)            1860116   2125   422  Ok
+lzma (v5.2.5) (level 2)            1774564   4034   423  Ok
+lzma (v5.2.5) (level 3)            1735310   4985   370  Ok
+lzma (v5.2.5) (level 4)            1645678   6940   370  Ok
+lzma (v5.2.5) (level 5)            1589728   8893   370  Ok
+lzma (v5.2.5) (level 6)            1571292  13162   373  Ok
+lzma (v5.2.5) (level 7)            1571177  13161   370  Ok
+lzma (v5.2.5) (level 8)            1571177  13563   422  Ok
+lzma (v5.2.5) (level 9)            1571177  13461   374  Ok
+lzop (v1.04) (level 1)             3541204    120   119  Ok
+lzop (v1.04) (level 2)             3500081    119   120  Ok
+lzop (v1.04) (level 3)             3500081    119   121  Ok
+lzop (v1.04) (level 4)             3500081    122   122  Ok
+lzop (v1.04) (level 5)             3500081    120   120  Ok
+lzop (v1.04) (level 6)             3500081    120   122  Ok
+lzop (v1.04) (level 7)             2533972   2178   119  Ok
+lzop (v1.04) (level 8)             2492440   3479   119  Ok
+lzop (v1.04) (level 9)             2492365   3831   119  Ok
+lzturbo (v1.2) (level 10)          3042582    125    40  Ok
+lzturbo (v1.2) (level 11)          2744566    270    72  Ok
+lzturbo (v1.2) (level 12)          2585234    472    70  Ok
+lzturbo (v1.2) (level 19)          2400670  21142    70  Ok
+lzturbo (v1.2) (level 20)          2835751    122    70  Ok
+lzturbo (v1.2) (level 21)          2480907    272   123  Ok
+lzturbo (v1.2) (level 22)          2279181    574    71  Ok
+lzturbo (v1.2) (level 29)          1928420  23243    70  Ok
+lzturbo (v1.2) (level 30)          2279924    170    73  Ok
+lzturbo (v1.2) (level 31)          2049361    323   120  Ok
+lzturbo (v1.2) (level 32)          1780728    722   124  Ok
+lzturbo (v1.2) (level 39)          1549909  26458   123  Ok
+lzturbo (v1.2) (level 49)          1482625  33575   423  Ok
+xz (v5.2.5) (level 1)              1860452   2226   471  Ok
+xz (v5.2.5) (level 2)              1774876   3732   471  Ok
+xz (v5.2.5) (level 3)              1735624   6189   421  Ok
+xz (v5.2.5) (level 4)              1645976   7847   421  Ok
+xz (v5.2.5) (level 5)              1590016  10904   420  Ok
+xz (v5.2.5) (level 6)              1571580  12809   421  Ok
+xz (v5.2.5) (level 7)              1571464  13161   427  Ok
+xz (v5.2.5) (level 8)              1571464  13211   420  Ok
+xz (v5.2.5) (level 9)              1571464  13463   421  Ok
+zstd (v1.4.9) (level 1)            2226771    174    69  Ok
+zstd (v1.4.9) (level 2)            2079479    219    69  Ok
+zstd (v1.4.9) (level 3)            1983729    269   122  Ok
+zstd (v1.4.9) (level 4)            1962264    323   119  Ok
+zstd (v1.4.9) (level 5)            1920507    471    70  Ok
+zstd (v1.4.9) (level 6)            1866447    673    70  Ok
+zstd (v1.4.9) (level 7)            1799913    822    69  Ok
+zstd (v1.4.9) (level 8)            1772420   1025    71  Ok
+zstd (v1.4.9) (level 9)            1751125   1424    70  Ok
+zstd (v1.4.9) (level 10)           1727532   1724    69  Ok
+zstd (v1.4.9) (level 11)           1716742   1976    72  Ok
+zstd (v1.4.9) (level 12)           1699486   3129    71  Ok
+zstd (v1.4.9) (level 13)           1678630   3785    72  Ok
+zstd (v1.4.9) (level 14)           1661247   4484   119  Ok
+zstd (v1.4.9) (level 15)           1651398   5385    73  Ok
+zstd (v1.4.9) (level 16)           1627540   8647    70  Ok
+zstd (v1.4.9) (level 17)           1612760  10401    71  Ok
+zstd (v1.4.9) (level 18)           1611737  14566   119  Ok
+zstd (v1.4.9) (level 19)           1553065  28612   120  Ok
+zstd (long) (v1.4.9) (level 1)     2215898    220    71  Ok
+zstd (long) (v1.4.9) (level 2)     2076174    272    70  Ok
+zstd (long) (v1.4.9) (level 3)     1986162    372   119  Ok
+zstd (long) (v1.4.9) (level 4)     1967792    370   122  Ok
+zstd (long) (v1.4.9) (level 5)     1942651    523   120  Ok
+zstd (long) (v1.4.9) (level 6)     1881062    675    71  Ok
+zstd (long) (v1.4.9) (level 7)     1815570    823   121  Ok
+zstd (long) (v1.4.9) (level 8)     1786313   1022    72  Ok
+zstd (long) (v1.4.9) (level 9)     1765164   1425    70  Ok
+zstd (long) (v1.4.9) (level 10)    1741764   1724   121  Ok
+zstd (long) (v1.4.9) (level 11)    1725663   2028   121  Ok
+zstd (long) (v1.4.9) (level 12)    1708787   3078    72  Ok
+zstd (long) (v1.4.9) (level 13)    1699279   3835    69  Ok
+zstd (long) (v1.4.9) (level 14)    1676298   4233   120  Ok
+zstd (long) (v1.4.9) (level 15)    1665253   5137   123  Ok
+zstd (long) (v1.4.9) (level 16)    1626665   8598   121  Ok
+zstd (long) (v1.4.9) (level 17)    1612534  10502   121  Ok
+zstd (long) (v1.4.9) (level 18)    1611701  14665   122  Ok
+zstd (long) (v1.4.9) (level 19)    1553000  28762    70  Ok
+zstd (ultra) (v1.4.9) (level 1)    2215898    220    71  Ok
+zstd (ultra) (v1.4.9) (level 2)    2076174    271    70  Ok
+zstd (ultra) (v1.4.9) (level 3)    1986162    321   119  Ok
+zstd (ultra) (v1.4.9) (level 4)    1967792    371    70  Ok
+zstd (ultra) (v1.4.9) (level 5)    1942651    473    70  Ok
+zstd (ultra) (v1.4.9) (level 6)    1881062    623   120  Ok
+zstd (ultra) (v1.4.9) (level 7)    1815570    822    70  Ok
+zstd (ultra) (v1.4.9) (level 8)    1786313   1024    69  Ok
+zstd (ultra) (v1.4.9) (level 9)    1765164   1373    70  Ok
+zstd (ultra) (v1.4.9) (level 10)   1741764   1674    69  Ok
+zstd (ultra) (v1.4.9) (level 11)   1725663   2025    72  Ok
+zstd (ultra) (v1.4.9) (level 12)   1708787   3129   121  Ok
+zstd (ultra) (v1.4.9) (level 13)   1699279   3831    69  Ok
+zstd (ultra) (v1.4.9) (level 14)   1676298   4283   123  Ok
+zstd (ultra) (v1.4.9) (level 15)   1665253   5493   121  Ok
+zstd (ultra) (v1.4.9) (level 16)   1626665   8497   119  Ok
+zstd (ultra) (v1.4.9) (level 17)   1612534  10552    70  Ok
+zstd (ultra) (v1.4.9) (level 18)   1611701  14816   121  Ok
+zstd (ultra) (v1.4.9) (level 19)   1553000  30118   122  Ok
+zstd (ultra) (v1.4.9) (level 20)   1552912  28710   121  Ok
+zstd (ultra) (v1.4.9) (level 21)   1552951  29659   119  Ok
+zstd (ultra) (v1.4.9) (level 22)   1552946  54043   122  Ok
+zstd (fast) (v1.4.9) (level 1)     2915929    170    72  Ok
+zstd (fast) (v1.4.9) (level 2)     3000969    173    69  Ok
+zstd (fast) (v1.4.9) (level 3)     3108598    171    70  Ok
+zstd (fast) (v1.4.9) (level 4)     3227379    120    71  Ok
+zstd (fast) (v1.4.9) (level 5)     3352683    121    70  Ok
+zstd (fast) (v1.4.9) (level 6)     3461242    120    72  Ok
+zstd (fast) (v1.4.9) (level 7)     3546767    121    72  Ok
+zstd (fast) (v1.4.9) (level 8)     3611709    121    70  Ok
+zstd (fast) (v1.4.9) (level 9)     3671833    173    71  Ok
+zstd (fast) (v1.4.9) (level 10)    3729874    120    73  Ok
+zstd (fast) (v1.4.9) (level 11)    3795407    123    70  Ok
+zstd (fast) (v1.4.9) (level 12)    3852184    122    71  Ok
+zstd (fast) (v1.4.9) (level 13)    3907791    121    71  Ok
+zstd (fast) (v1.4.9) (level 14)    3958570    226    78  Ok
+zstd (fast) (v1.4.9) (level 15)    4003171    121    74  Ok
+zstd (fast) (v1.4.9) (level 16)    4047178    120    70  Ok
+zstd (fast) (v1.4.9) (level 17)    4085799    123    73  Ok
+zstd (fast) (v1.4.9) (level 18)    4123451    123    72  Ok
+zstd (fast) (v1.4.9) (level 19)    4159892    176    71  Ok
+zstd (fast) (v1.4.9) (level 50)    4940770    125    71  Ok
+zstd (fast) (v1.4.9) (level 100)   5759160    120    73  Ok
+zstd (fast) (v1.4.9) (level 1000)  9423060     71    73  Ok
+
+## Results for examples/empty.bin:
+
+Tool                                 CS    CT    DT  Result
+---------------------------------  ----  ----  ----  --------
+cat (v8.32) (level 0)                 0    13    12  Ok
+brotli (v1.0.9) (level 0)             1    13    10  Ok
+brotli (v1.0.9) (level 1)             1    16    12  Ok
+brotli (v1.0.9) (level 2)             1    14    19  Ok
+brotli (v1.0.9) (level 3)             1    16    14  Ok
+brotli (v1.0.9) (level 4)             1    12     9  Ok
+brotli (v1.0.9) (level 5)             1    10     9  Ok
+brotli (v1.0.9) (level 6)             1    15    13  Ok
+brotli (v1.0.9) (level 7)             1    10    11  Ok
+brotli (v1.0.9) (level 8)             1    10    12  Ok
+brotli (v1.0.9) (level 9)             1     9    11  Ok
+brotli (v1.0.9) (level 10)            1    13    10  Ok
+brotli (v1.0.9) (level 11)            1    13    15  Ok
+brotli (long) (v1.0.9) (level 0)      1     9     8  Ok
+brotli (long) (v1.0.9) (level 1)      1    12     8  Ok
+brotli (long) (v1.0.9) (level 2)      1     9    10  Ok
+brotli (long) (v1.0.9) (level 3)      1    11     9  Ok
+brotli (long) (v1.0.9) (level 4)      1     8    12  Ok
+brotli (long) (v1.0.9) (level 5)      1    15     9  Ok
+brotli (long) (v1.0.9) (level 6)      1    12    10  Ok
+brotli (long) (v1.0.9) (level 7)      1    11    13  Ok
+brotli (long) (v1.0.9) (level 8)      1     9    15  Ok
+brotli (long) (v1.0.9) (level 9)      1    12     9  Ok
+brotli (long) (v1.0.9) (level 10)     1    11    14  Ok
+brotli (long) (v1.0.9) (level 11)     1    14    10  Ok
+bzip2 (v1.0.8) (level 1)             14     9    10  Ok
+bzip2 (v1.0.8) (level 2)             14     8    11  Ok
+bzip2 (v1.0.8) (level 3)             14    11    11  Ok
+bzip2 (v1.0.8) (level 4)             14     9    10  Ok
+bzip2 (v1.0.8) (level 5)             14    11     9  Ok
+bzip2 (v1.0.8) (level 6)             14    10    12  Ok
+bzip2 (v1.0.8) (level 7)             14    12    10  Ok
+bzip2 (v1.0.8) (level 8)             14     9    11  Ok
+bzip2 (v1.0.8) (level 9)             14     8    10  Ok
+gzip (v1.10) (level 1)               20     8    12  Ok
+gzip (v1.10) (level 2)               20     9    11  Ok
+gzip (v1.10) (level 3)               20    10    10  Ok
+gzip (v1.10) (level 4)               20    10    11  Ok
+gzip (v1.10) (level 5)               20    10    12  Ok
+gzip (v1.10) (level 6)               20    11    10  Ok
+gzip (v1.10) (level 7)               20    11    10  Ok
+gzip (v1.10) (level 8)               20    11     9  Ok
+gzip (v1.10) (level 9)               20    12    11  Ok
+lizard (v1.0.0) (level 10)           15    13     9  Ok
+lizard (v1.0.0) (level 11)           15     9    11  Ok
+lizard (v1.0.0) (level 12)           15    11     9  Ok
+lizard (v1.0.0) (level 13)           15    11     9  Ok
+lizard (v1.0.0) (level 14)           15    10     9  Ok
+lizard (v1.0.0) (level 15)           15    14    12  Ok
+lizard (v1.0.0) (level 16)           15    11    14  Ok
+lizard (v1.0.0) (level 17)           15     8    14  Ok
+lizard (v1.0.0) (level 18)           15    13    11  Ok
+lizard (v1.0.0) (level 19)           15    10    10  Ok
+lizard (v1.0.0) (level 20)           15    11    11  Ok
+lizard (v1.0.0) (level 21)           15    12    13  Ok
+lizard (v1.0.0) (level 22)           15    11    11  Ok
+lizard (v1.0.0) (level 23)           15     9    10  Ok
+lizard (v1.0.0) (level 24)           15     9    11  Ok
+lizard (v1.0.0) (level 25)           15     9     9  Ok
+lizard (v1.0.0) (level 26)           15    11    12  Ok
+lizard (v1.0.0) (level 27)           15    14    10  Ok
+lizard (v1.0.0) (level 28)           15    10    12  Ok
+lizard (v1.0.0) (level 29)           15     8    10  Ok
+lizard (v1.0.0) (level 30)           15    10    10  Ok
+lizard (v1.0.0) (level 31)           15    12    10  Ok
+lizard (v1.0.0) (level 32)           15    11     9  Ok
+lizard (v1.0.0) (level 33)           15    11    10  Ok
+lizard (v1.0.0) (level 34)           15    12    11  Ok
+lizard (v1.0.0) (level 35)           15    11    11  Ok
+lizard (v1.0.0) (level 36)           15    11    11  Ok
+lizard (v1.0.0) (level 37)           15    10     9  Ok
+lizard (v1.0.0) (level 38)           15    14    10  Ok
+lizard (v1.0.0) (level 39)           15     9    10  Ok
+lizard (v1.0.0) (level 40)           15    11    10  Ok
+lizard (v1.0.0) (level 41)           15    10     8  Ok
+lizard (v1.0.0) (level 42)           15    12    13  Ok
+lizard (v1.0.0) (level 43)           15    11    11  Ok
+lizard (v1.0.0) (level 44)           15    10     9  Ok
+lizard (v1.0.0) (level 45)           15     9    13  Ok
+lizard (v1.0.0) (level 46)           15    10    11  Ok
+lizard (v1.0.0) (level 47)           15    11    11  Ok
+lizard (v1.0.0) (level 48)           15    10     8  Ok
+lizard (v1.0.0) (level 49)           15    12    10  Ok
+lz4 (v1.9.3) (level 1)               15     9    11  Ok
+lz4 (v1.9.3) (level 2)               15     9    16  Ok
+lz4 (v1.9.3) (level 3)               15    11     8  Ok
+lz4 (v1.9.3) (level 4)               15    10     8  Ok
+lz4 (v1.9.3) (level 5)               15    12    10  Ok
+lz4 (v1.9.3) (level 6)               15    13     8  Ok
+lz4 (v1.9.3) (level 7)               15    10    11  Ok
+lz4 (v1.9.3) (level 8)               15    12     9  Ok
+lz4 (v1.9.3) (level 9)               15    11    11  Ok
+lz4 (v1.9.3) (level 10)              15    10    11  Ok
+lz4 (v1.9.3) (level 11)              15     9     8  Ok
+lz4 (v1.9.3) (level 12)              15     8     9  Ok
+lzf (vNone) (level 1)                 0     8    10  Ok
+lzf (vNone) (level 2)                 0     8    13  Ok
+lzf (vNone) (level 3)                 0     8     9  Ok
+lzf (vNone) (level 4)                 0     9    12  Ok
+lzf (vNone) (level 5)                 0    13     9  Ok
+lzf (vNone) (level 6)                 0     8     8  Ok
+lzf (vNone) (level 7)                 0    12     8  Ok
+lzf (vNone) (level 8)                 0     9     8  Ok
+lzf (vNone) (level 9)                 0    13    11  Ok
+lzf (vNone) (level 10)                0    13    12  Ok
+lzf (vNone) (level 11)                0    10    11  Ok
+lzf (vNone) (level 12)                0    13    10  Ok
+lzma (v5.2.5) (level 1)              23    13    13  Ok
+lzma (v5.2.5) (level 2)              23    14    13  Ok
+lzma (v5.2.5) (level 3)              23    12    13  Ok
+lzma (v5.2.5) (level 4)              23    15    13  Ok
+lzma (v5.2.5) (level 5)              23    13    11  Ok
+lzma (v5.2.5) (level 6)              23    12    10  Ok
+lzma (v5.2.5) (level 7)              23    16    13  Ok
+lzma (v5.2.5) (level 8)              23    13    10  Ok
+lzma (v5.2.5) (level 9)              23    10    10  Ok
+lzop (v1.04) (level 1)               42    11    11  Ok
+lzop (v1.04) (level 2)               42    13    10  Ok
+lzop (v1.04) (level 3)               42    10     7  Ok
+lzop (v1.04) (level 4)               42     9    10  Ok
+lzop (v1.04) (level 5)               42     9    13  Ok
+lzop (v1.04) (level 6)               42    10    13  Ok
+lzop (v1.04) (level 7)               42    15    13  Ok
+lzop (v1.04) (level 8)               42    13    13  Ok
+lzop (v1.04) (level 9)               42    11    10  Ok
+lzturbo (v1.2) (level 10)            32    12    14  Ok
+lzturbo (v1.2) (level 11)            32    11    12  Ok
+lzturbo (v1.2) (level 12)            32    11    12  Ok
+lzturbo (v1.2) (level 19)            32    11    11  Ok
+lzturbo (v1.2) (level 20)            32    11    10  Ok
+lzturbo (v1.2) (level 21)            32    13    14  Ok
+lzturbo (v1.2) (level 22)            32    14    14  Ok
+lzturbo (v1.2) (level 29)            32    11    10  Ok
+lzturbo (v1.2) (level 30)            32    10    13  Ok
+lzturbo (v1.2) (level 31)            32    10    10  Ok
+lzturbo (v1.2) (level 32)            32    10    11  Ok
+lzturbo (v1.2) (level 39)            32    11    11  Ok
+lzturbo (v1.2) (level 49)            32    13    11  Ok
+xz (v5.2.5) (level 1)                32    14    11  Ok
+xz (v5.2.5) (level 2)                32    11    13  Ok
+xz (v5.2.5) (level 3)                32    12    11  Ok
+xz (v5.2.5) (level 4)                32    11    13  Ok
+xz (v5.2.5) (level 5)                32    10    11  Ok
+xz (v5.2.5) (level 6)                32    12    12  Ok
+xz (v5.2.5) (level 7)                32    13    13  Ok
+xz (v5.2.5) (level 8)                32    11    11  Ok
+xz (v5.2.5) (level 9)                32    10    11  Ok
+zstd (v1.4.9) (level 1)              13    12    14  Ok
+zstd (v1.4.9) (level 2)              13    10    12  Ok
+zstd (v1.4.9) (level 3)              13    11    17  Ok
+zstd (v1.4.9) (level 4)              13    10    14  Ok
+zstd (v1.4.9) (level 5)              13    12    13  Ok
+zstd (v1.4.9) (level 6)              13    11    14  Ok
+zstd (v1.4.9) (level 7)              13    13    13  Ok
+zstd (v1.4.9) (level 8)              13    11    11  Ok
+zstd (v1.4.9) (level 9)              13    13    12  Ok
+zstd (v1.4.9) (level 10)             13    14    12  Ok
+zstd (v1.4.9) (level 11)             13    13    13  Ok
+zstd (v1.4.9) (level 12)             13    15    12  Ok
+zstd (v1.4.9) (level 13)             13    14    17  Ok
+zstd (v1.4.9) (level 14)             13    15    17  Ok
+zstd (v1.4.9) (level 15)             13    11    10  Ok
+zstd (v1.4.9) (level 16)             13    15    11  Ok
+zstd (v1.4.9) (level 17)             13    12    12  Ok
+zstd (v1.4.9) (level 18)             13    10    12  Ok
+zstd (v1.4.9) (level 19)             13    10    11  Ok
+zstd (long) (v1.4.9) (level 1)       13    13    10  Ok
+zstd (long) (v1.4.9) (level 2)       13    12     9  Ok
+zstd (long) (v1.4.9) (level 3)       13    12    11  Ok
+zstd (long) (v1.4.9) (level 4)       13    12    10  Ok
+zstd (long) (v1.4.9) (level 5)       13    10     9  Ok
+zstd (long) (v1.4.9) (level 6)       13    10     9  Ok
+zstd (long) (v1.4.9) (level 7)       13     9    10  Ok
+zstd (long) (v1.4.9) (level 8)       13    10     9  Ok
+zstd (long) (v1.4.9) (level 9)       13     9    11  Ok
+zstd (long) (v1.4.9) (level 10)      13    10    14  Ok
+zstd (long) (v1.4.9) (level 11)      13    10     8  Ok
+zstd (long) (v1.4.9) (level 12)      13     9     9  Ok
+zstd (long) (v1.4.9) (level 13)      13    11    10  Ok
+zstd (long) (v1.4.9) (level 14)      13    11     9  Ok
+zstd (long) (v1.4.9) (level 15)      13     9    10  Ok
+zstd (long) (v1.4.9) (level 16)      13     9    11  Ok
+zstd (long) (v1.4.9) (level 17)      13    10    10  Ok
+zstd (long) (v1.4.9) (level 18)      13    11    12  Ok
+zstd (long) (v1.4.9) (level 19)      13     9    10  Ok
+zstd (ultra) (v1.4.9) (level 1)      13     9     9  Ok
+zstd (ultra) (v1.4.9) (level 2)      13     9    12  Ok
+zstd (ultra) (v1.4.9) (level 3)      13    11    11  Ok
+zstd (ultra) (v1.4.9) (level 4)      13     9     9  Ok
+zstd (ultra) (v1.4.9) (level 5)      13    10    13  Ok
+zstd (ultra) (v1.4.9) (level 6)      13    11    11  Ok
+zstd (ultra) (v1.4.9) (level 7)      13     8    10  Ok
+zstd (ultra) (v1.4.9) (level 8)      13    10    10  Ok
+zstd (ultra) (v1.4.9) (level 9)      13    12    11  Ok
+zstd (ultra) (v1.4.9) (level 10)     13    12     8  Ok
+zstd (ultra) (v1.4.9) (level 11)     13    12    11  Ok
+zstd (ultra) (v1.4.9) (level 12)     13    11     9  Ok
+zstd (ultra) (v1.4.9) (level 13)     13    12     9  Ok
+zstd (ultra) (v1.4.9) (level 14)     13    11    10  Ok
+zstd (ultra) (v1.4.9) (level 15)     13    13    11  Ok
+zstd (ultra) (v1.4.9) (level 16)     13    16    14  Ok
+zstd (ultra) (v1.4.9) (level 17)     13    12    11  Ok
+zstd (ultra) (v1.4.9) (level 18)     13    16    14  Ok
+zstd (ultra) (v1.4.9) (level 19)     13    10    12  Ok
+zstd (ultra) (v1.4.9) (level 20)     13    11    11  Ok
+zstd (ultra) (v1.4.9) (level 21)     13    13    11  Ok
+zstd (ultra) (v1.4.9) (level 22)     13    13    16  Ok
+zstd (fast) (v1.4.9) (level 1)       13    13    12  Ok
+zstd (fast) (v1.4.9) (level 2)       13    11    13  Ok
+zstd (fast) (v1.4.9) (level 3)       13    10    12  Ok
+zstd (fast) (v1.4.9) (level 4)       13    15    13  Ok
+zstd (fast) (v1.4.9) (level 5)       13    11    11  Ok
+zstd (fast) (v1.4.9) (level 6)       13    12    16  Ok
+zstd (fast) (v1.4.9) (level 7)       13    11    12  Ok
+zstd (fast) (v1.4.9) (level 8)       13    10    12  Ok
+zstd (fast) (v1.4.9) (level 9)       13    15    15  Ok
+zstd (fast) (v1.4.9) (level 10)      13    11    13  Ok
+zstd (fast) (v1.4.9) (level 11)      13    12    11  Ok
+zstd (fast) (v1.4.9) (level 12)      13    13    14  Ok
+zstd (fast) (v1.4.9) (level 13)      13    10    13  Ok
+zstd (fast) (v1.4.9) (level 14)      13    10    11  Ok
+zstd (fast) (v1.4.9) (level 15)      13    12    11  Ok
+zstd (fast) (v1.4.9) (level 16)      13    13    11  Ok
+zstd (fast) (v1.4.9) (level 17)      13    13    14  Ok
+zstd (fast) (v1.4.9) (level 18)      13    12    13  Ok
+zstd (fast) (v1.4.9) (level 19)      13    13    12  Ok
+zstd (fast) (v1.4.9) (level 50)      13    14    13  Ok
+zstd (fast) (v1.4.9) (level 100)     13    11    12  Ok
+zstd (fast) (v1.4.9) (level 1000)    13    13    13  Ok
+
+## Results for examples/random.bin:
+
+Tool                                    CS    CT    DT  Result
+---------------------------------  -------  ----  ----  --------
+cat (v8.32) (level 0)              1048576    13    15  Ok
+brotli (v1.0.9) (level 0)          1048584    17    16  Ok
+brotli (v1.0.9) (level 1)          1048584    23    17  Ok
+brotli (v1.0.9) (level 2)          1048581    25    24  Ok
+brotli (v1.0.9) (level 3)          1048581    43    26  Ok
+brotli (v1.0.9) (level 4)          1048581    41    15  Ok
+brotli (v1.0.9) (level 5)          1048581    74    15  Ok
+brotli (v1.0.9) (level 6)          1048581    73    15  Ok
+brotli (v1.0.9) (level 7)          1048581    73    16  Ok
+brotli (v1.0.9) (level 8)          1048581   126    23  Ok
+brotli (v1.0.9) (level 9)          1048581   124    24  Ok
+brotli (v1.0.9) (level 10)         1048581  1479    13  Ok
+brotli (v1.0.9) (level 11)         1048581  1877    22  Ok
+brotli (long) (v1.0.9) (level 0)   1048584    22    15  Ok
+brotli (long) (v1.0.9) (level 1)   1048584    21    16  Ok
+brotli (long) (v1.0.9) (level 2)   1048581    22    15  Ok
+brotli (long) (v1.0.9) (level 3)   1048581    37    18  Ok
+brotli (long) (v1.0.9) (level 4)   1048581    45    23  Ok
+brotli (long) (v1.0.9) (level 5)   1048581    70    17  Ok
+brotli (long) (v1.0.9) (level 6)   1048581    74    25  Ok
+brotli (long) (v1.0.9) (level 7)   1048581    76    24  Ok
+brotli (long) (v1.0.9) (level 8)   1048581    71    16  Ok
+brotli (long) (v1.0.9) (level 9)   1048581   120    18  Ok
+brotli (long) (v1.0.9) (level 10)  1048581  1479    13  Ok
+brotli (long) (v1.0.9) (level 11)  1048581  1877    13  Ok
+bzip2 (v1.0.8) (level 1)           1057196   627   271  Ok
+bzip2 (v1.0.8) (level 2)           1055611   625   270  Ok
+bzip2 (v1.0.8) (level 3)           1054977   621   274  Ok
+bzip2 (v1.0.8) (level 4)           1054527   572   270  Ok
+bzip2 (v1.0.8) (level 5)           1054449   623   323  Ok
+bzip2 (v1.0.8) (level 6)           1054058   621   322  Ok
+bzip2 (v1.0.8) (level 7)           1054087   622   321  Ok
+bzip2 (v1.0.8) (level 8)           1054158   672   322  Ok
+bzip2 (v1.0.8) (level 9)           1053399   725   373  Ok
+gzip (v1.10) (level 1)             1048754   170    39  Ok
+gzip (v1.10) (level 2)             1048754   176    38  Ok
+gzip (v1.10) (level 3)             1048754   171    37  Ok
+gzip (v1.10) (level 4)             1048754   175    44  Ok
+gzip (v1.10) (level 5)             1048754   180    40  Ok
+gzip (v1.10) (level 6)             1048754   173    39  Ok
+gzip (v1.10) (level 7)             1048754   173    38  Ok
+gzip (v1.10) (level 8)             1048754   171    42  Ok
+gzip (v1.10) (level 9)             1048754   173    38  Ok
+lizard (v1.0.0) (level 10)         1048595    27    12  Ok
+lizard (v1.0.0) (level 11)         1048595    23    13  Ok
+lizard (v1.0.0) (level 12)         1048595   122    15  Ok
+lizard (v1.0.0) (level 13)         1048595   175    14  Ok
+lizard (v1.0.0) (level 14)         1048595   173     9  Ok
+lizard (v1.0.0) (level 15)         1048595   169     9  Ok
+lizard (v1.0.0) (level 16)         1048595   121     9  Ok
+lizard (v1.0.0) (level 17)         1048595   121    11  Ok
+lizard (v1.0.0) (level 18)         1048595   172    10  Ok
+lizard (v1.0.0) (level 19)         1048595   221    15  Ok
+lizard (v1.0.0) (level 20)         1048595    23    18  Ok
+lizard (v1.0.0) (level 21)         1048595    76    10  Ok
+lizard (v1.0.0) (level 22)         1048595   122    18  Ok
+lizard (v1.0.0) (level 23)         1048595   277    14  Ok
+lizard (v1.0.0) (level 24)         1048595   323    15  Ok
+lizard (v1.0.0) (level 25)         1048595   325     9  Ok
+lizard (v1.0.0) (level 26)         1048595   270    15  Ok
+lizard (v1.0.0) (level 27)         1048595   272    17  Ok
+lizard (v1.0.0) (level 28)         1048595   272    11  Ok
+lizard (v1.0.0) (level 29)         1048595   271    14  Ok
+lizard (v1.0.0) (level 30)         1048595    14    11  Ok
+lizard (v1.0.0) (level 31)         1048595    22    14  Ok
+lizard (v1.0.0) (level 32)         1048595    72    15  Ok
+lizard (v1.0.0) (level 33)         1048595   123     9  Ok
+lizard (v1.0.0) (level 34)         1048595   121    16  Ok
+lizard (v1.0.0) (level 35)         1048595   120    11  Ok
+lizard (v1.0.0) (level 36)         1048595   173    16  Ok
+lizard (v1.0.0) (level 37)         1048595   175    15  Ok
+lizard (v1.0.0) (level 38)         1048595   172     9  Ok
+lizard (v1.0.0) (level 39)         1048595   270    16  Ok
+lizard (v1.0.0) (level 40)         1048595    23    16  Ok
+lizard (v1.0.0) (level 41)         1048595    71    18  Ok
+lizard (v1.0.0) (level 42)         1048595   124     9  Ok
+lizard (v1.0.0) (level 43)         1048595   220     8  Ok
+lizard (v1.0.0) (level 44)         1048595   270    11  Ok
+lizard (v1.0.0) (level 45)         1048595   271     9  Ok
+lizard (v1.0.0) (level 46)         1048595   269     9  Ok
+lizard (v1.0.0) (level 47)         1048595   270    15  Ok
+lizard (v1.0.0) (level 48)         1048595   272     9  Ok
+lizard (v1.0.0) (level 49)         1048595   270    14  Ok
+lz4 (v1.9.3) (level 1)             1048595    15    16  Ok
+lz4 (v1.9.3) (level 2)             1048595    23    15  Ok
+lz4 (v1.9.3) (level 3)             1048595   178    10  Ok
+lz4 (v1.9.3) (level 4)             1048595   169     8  Ok
+lz4 (v1.9.3) (level 5)             1048595   168    10  Ok
+lz4 (v1.9.3) (level 6)             1048595   171     9  Ok
+lz4 (v1.9.3) (level 7)             1048595   169    13  Ok
+lz4 (v1.9.3) (level 8)             1048595   170     9  Ok
+lz4 (v1.9.3) (level 9)             1048595   170    12  Ok
+lz4 (v1.9.3) (level 10)            1048595   171    15  Ok
+lz4 (v1.9.3) (level 11)            1048595   172     9  Ok
+lz4 (v1.9.3) (level 12)            1048595   169    13  Ok
+lzf (vNone) (level 1)              1048661    39     9  Ok
+lzf (vNone) (level 2)              1048661    37    10  Ok
+lzf (vNone) (level 3)              1048661    39     9  Ok
+lzf (vNone) (level 4)              1048661    37     8  Ok
+lzf (vNone) (level 5)              1048661    37    13  Ok
+lzf (vNone) (level 6)              1048661    71    11  Ok
+lzf (vNone) (level 7)              1048661    72    10  Ok
+lzf (vNone) (level 8)              1048661    73    11  Ok
+lzf (vNone) (level 9)              1048661    71    12  Ok
+lzf (vNone) (level 10)             1048661    71    11  Ok
+lzf (vNone) (level 11)             1048661    72    10  Ok
+lzf (vNone) (level 12)             1048661    72    10  Ok
+lzma (v5.2.5) (level 1)            1063711   872   321  Ok
+lzma (v5.2.5) (level 2)            1063711   771   321  Ok
+lzma (v5.2.5) (level 3)            1063711   774   321  Ok
+lzma (v5.2.5) (level 4)            1062866   772   321  Ok
+lzma (v5.2.5) (level 5)            1062866   771   323  Ok
+lzma (v5.2.5) (level 6)            1062866   772   321  Ok
+lzma (v5.2.5) (level 7)            1062866   823   320  Ok
+lzma (v5.2.5) (level 8)            1062866   871   321  Ok
+lzma (v5.2.5) (level 9)            1062866   872   324  Ok
+lzop (v1.04) (level 1)             1048666    12    13  Ok
+lzop (v1.04) (level 2)             1048666    12    13  Ok
+lzop (v1.04) (level 3)             1048666    14    15  Ok
+lzop (v1.04) (level 4)             1048666    13    14  Ok
+lzop (v1.04) (level 5)             1048666    13    13  Ok
+lzop (v1.04) (level 6)             1048666    14    16  Ok
+lzop (v1.04) (level 7)             1048666   220    15  Ok
+lzop (v1.04) (level 8)             1048666   421    14  Ok
+lzop (v1.04) (level 9)             1048666   423    13  Ok
+lzturbo (v1.2) (level 10)          1048609    15    11  Ok
+lzturbo (v1.2) (level 11)          1048609    21    13  Ok
+lzturbo (v1.2) (level 12)          1048609    73    14  Ok
+lzturbo (v1.2) (level 19)          1048609   626     8  Ok
+lzturbo (v1.2) (level 20)          1048609    20    13  Ok
+lzturbo (v1.2) (level 21)          1048609    24    14  Ok
+lzturbo (v1.2) (level 22)          1048609   172    14  Ok
+lzturbo (v1.2) (level 29)          1048609   624     9  Ok
+lzturbo (v1.2) (level 30)          1048609    12    14  Ok
+lzturbo (v1.2) (level 31)          1048609    22    14  Ok
+lzturbo (v1.2) (level 32)          1048609   275    14  Ok
+lzturbo (v1.2) (level 39)          1048609   775    13  Ok
+lzturbo (v1.2) (level 49)          1048609  1230    13  Ok
+xz (v5.2.5) (level 1)              1048688   821    22  Ok
+xz (v5.2.5) (level 2)              1048688   775    21  Ok
+xz (v5.2.5) (level 3)              1048688   722    21  Ok
+xz (v5.2.5) (level 4)              1048688   821    24  Ok
+xz (v5.2.5) (level 5)              1048688   778    15  Ok
+xz (v5.2.5) (level 6)              1048688   772    21  Ok
+xz (v5.2.5) (level 7)              1048688   821    22  Ok
+xz (v5.2.5) (level 8)              1048688   876    21  Ok
+xz (v5.2.5) (level 9)              1048688   873    22  Ok
+zstd (v1.4.9) (level 1)            1048610    22    13  Ok
+zstd (v1.4.9) (level 2)            1048610    20    15  Ok
+zstd (v1.4.9) (level 3)            1048610    21    19  Ok
+zstd (v1.4.9) (level 4)            1048610    22    14  Ok
+zstd (v1.4.9) (level 5)            1048610    70    15  Ok
+zstd (v1.4.9) (level 6)            1048610    69    26  Ok
+zstd (v1.4.9) (level 7)            1048610    73    13  Ok
+zstd (v1.4.9) (level 8)            1048610    72    14  Ok
+zstd (v1.4.9) (level 9)            1048610    73    23  Ok
+zstd (v1.4.9) (level 10)           1048610    71    13  Ok
+zstd (v1.4.9) (level 11)           1048610   122    14  Ok
+zstd (v1.4.9) (level 12)           1048610   122    14  Ok
+zstd (v1.4.9) (level 13)           1048610   123    14  Ok
+zstd (v1.4.9) (level 14)           1048610   174    13  Ok
+zstd (v1.4.9) (level 15)           1048610   173    13  Ok
+zstd (v1.4.9) (level 16)           1048610   321    14  Ok
+zstd (v1.4.9) (level 17)           1048610   370    16  Ok
+zstd (v1.4.9) (level 18)           1048610   421    13  Ok
+zstd (v1.4.9) (level 19)           1048610   472    13  Ok
+zstd (long) (v1.4.9) (level 1)     1048610    41    13  Ok
+zstd (long) (v1.4.9) (level 2)     1048610    39    14  Ok
+zstd (long) (v1.4.9) (level 3)     1048610    40    14  Ok
+zstd (long) (v1.4.9) (level 4)     1048610    37    16  Ok
+zstd (long) (v1.4.9) (level 5)     1048610    72    14  Ok
+zstd (long) (v1.4.9) (level 6)     1048610    71    16  Ok
+zstd (long) (v1.4.9) (level 7)     1048610    72    25  Ok
+zstd (long) (v1.4.9) (level 8)     1048610    71    14  Ok
+zstd (long) (v1.4.9) (level 9)     1048610    70    13  Ok
+zstd (long) (v1.4.9) (level 10)    1048610   119    13  Ok
+zstd (long) (v1.4.9) (level 11)    1048610   120    12  Ok
+zstd (long) (v1.4.9) (level 12)    1048610   122    17  Ok
+zstd (long) (v1.4.9) (level 13)    1048610   122    13  Ok
+zstd (long) (v1.4.9) (level 14)    1048610   118    12  Ok
+zstd (long) (v1.4.9) (level 15)    1048610   168    13  Ok
+zstd (long) (v1.4.9) (level 16)    1048610   371    13  Ok
+zstd (long) (v1.4.9) (level 17)    1048610   319    13  Ok
+zstd (long) (v1.4.9) (level 18)    1048610   369    13  Ok
+zstd (long) (v1.4.9) (level 19)    1048610   419    13  Ok
+zstd (ultra) (v1.4.9) (level 1)    1048610    36    13  Ok
+zstd (ultra) (v1.4.9) (level 2)    1048610    71    17  Ok
+zstd (ultra) (v1.4.9) (level 3)    1048610    40    16  Ok
+zstd (ultra) (v1.4.9) (level 4)    1048610    39    14  Ok
+zstd (ultra) (v1.4.9) (level 5)    1048610    68    13  Ok
+zstd (ultra) (v1.4.9) (level 6)    1048610    69    13  Ok
+zstd (ultra) (v1.4.9) (level 7)    1048610    69    13  Ok
+zstd (ultra) (v1.4.9) (level 8)    1048610    69    13  Ok
+zstd (ultra) (v1.4.9) (level 9)    1048610    69    13  Ok
+zstd (ultra) (v1.4.9) (level 10)   1048610    69    14  Ok
+zstd (ultra) (v1.4.9) (level 11)   1048610   120    14  Ok
+zstd (ultra) (v1.4.9) (level 12)   1048610   119    14  Ok
+zstd (ultra) (v1.4.9) (level 13)   1048610   119    15  Ok
+zstd (ultra) (v1.4.9) (level 14)   1048610   172    13  Ok
+zstd (ultra) (v1.4.9) (level 15)   1048610   170    14  Ok
+zstd (ultra) (v1.4.9) (level 16)   1048610   320    14  Ok
+zstd (ultra) (v1.4.9) (level 17)   1048610   320    12  Ok
+zstd (ultra) (v1.4.9) (level 18)   1048610   370    13  Ok
+zstd (ultra) (v1.4.9) (level 19)   1048610   420    13  Ok
+zstd (ultra) (v1.4.9) (level 20)   1048610   519    13  Ok
+zstd (ultra) (v1.4.9) (level 21)   1048610   720    12  Ok
+zstd (ultra) (v1.4.9) (level 22)   1048610  1121    12  Ok
+zstd (fast) (v1.4.9) (level 1)     1048610    11    12  Ok
+zstd (fast) (v1.4.9) (level 2)     1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 3)     1048610    12    13  Ok
+zstd (fast) (v1.4.9) (level 4)     1048610    11    12  Ok
+zstd (fast) (v1.4.9) (level 5)     1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 6)     1048610    11    12  Ok
+zstd (fast) (v1.4.9) (level 7)     1048610    11    12  Ok
+zstd (fast) (v1.4.9) (level 8)     1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 9)     1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 10)    1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 11)    1048610    12    13  Ok
+zstd (fast) (v1.4.9) (level 12)    1048610    12    13  Ok
+zstd (fast) (v1.4.9) (level 13)    1048610    13    13  Ok
+zstd (fast) (v1.4.9) (level 14)    1048610    13    13  Ok
+zstd (fast) (v1.4.9) (level 15)    1048610    12    13  Ok
+zstd (fast) (v1.4.9) (level 16)    1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 17)    1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 18)    1048610    12    13  Ok
+zstd (fast) (v1.4.9) (level 19)    1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 50)    1048610    12    12  Ok
+zstd (fast) (v1.4.9) (level 100)   1048610    12    13  Ok
+zstd (fast) (v1.4.9) (level 1000)  1048610    12    13  Ok
+

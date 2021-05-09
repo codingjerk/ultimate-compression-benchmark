@@ -24,7 +24,7 @@ class RunResult:
     is_ok: bool = True
 
     def ratio(self) -> float:
-        return self.original_size / self.compressed_size
+        return self.original_size / max(self.compressed_size, 1)
 
 
 @dataclass
@@ -50,7 +50,7 @@ class BenchmarkResult:
             if result.is_ok:
                 data.append([
                     f"{result.tool.name} (v{result.tool.gather_version()}) (level {result.level})",
-                    int(result.compressed_size / result.original_size * 1000),
+                    int(result.compressed_size / max(result.original_size, 1) * 1000),
                     int(result.compression_time * 1000),
                     int(result.decompression_time * 1000),
                     "Ok",
