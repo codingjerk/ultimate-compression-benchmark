@@ -51,13 +51,20 @@ class Tool:
 
     def timed_run(self, command: List[str], stdin: IO[Any], stdout: IO[Any], timeout: float) -> float:
         start_time = time.time()
-        process = subprocess.Popen(command, stdin=stdin, stdout=stdout)
-        process.wait(timeout=timeout)
+        self.run_with_timeout(command, stdin, stdout, timeout)
         end_time = time.time()
 
-        stdout.flush()
-
         return end_time - start_time
+
+    def run_with_timeout(self, command: List[str], stdin: IO[Any], stdout: IO[Any], timeout: float) -> None:
+        process = subprocess.Popen(command, stdin=stdin, stdout=stdout)
+        try:
+            process.wait(timeout=timeout)
+            stdout.flush()
+        except subprocess.TimeoutExpired:
+            process.terminate()
+            process.kill()
+            raise
 
     def format_arguments(self, arguments, level) -> List[str]:
         return [
