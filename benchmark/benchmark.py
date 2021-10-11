@@ -54,23 +54,53 @@ class Benchmark:
         level: int,
         check_output: bool,
         verbose: bool,
+        additional_message: str,
     ) -> Union[RunResult, RunError]:
         try:
             if verbose:
-                print(f"[{tool.identity()} ({level})]: {file}")
+                print(f"[{tool.identity()} ({level})]: {file} {additional_message}")
 
             sys.stdout.flush()
             return self.single_run(tool, file, level, check_output)
         except Exception as exception:
+            if verbose:
+                print(f"[{tool.identity()} ({level})]: {file} {additional_message} [FAILED]")
+
             return RunError(tool, file, level, exception)
 
     def run_file(self, file: str):
+        total_test_count = 0
+        for tool in self.tools:
+            for level in tool.compression_levels:
+                total_test_count += 1
+
+        current_test = 0
         for tool in self.tools:
             # Warmup run
-            self.protected_single_run(tool, file, level=tool.compression_levels[0], check_output=False, verbose=False)
+            self.protected_single_run(tool, file, level=tool.compression_levels[0], check_output=False, verbose=False, additional_message="[warmup run]")
 
+            tool_is_ok = True
             for level in tool.compression_levels:
-                yield self.protected_single_run(tool, file, level=level, check_output=True, verbose=True)
+                current_test += 1
+                additional_message = f"[test {current_test}/{total_test_count}]"
+
+                if not tool_is_ok:
+                    print(f"[{tool.identity()} ({level})]: {file} {additional_message} [SKIPPED]")
+                    continue
+
+                test_result = self.protected_single_run(
+                    tool,
+                    file,
+                    level=level,
+                    check_output=True,
+                    verbose=True,
+                    additional_message=additional_message,
+                )
+
+                if not test_result.is_ok:
+                    tool_is_ok = False
+
+                yield test_result
 
     def run(self) -> BenchmarkResult:
         return BenchmarkResult(
