@@ -27,7 +27,9 @@ class Tool:
 
     def gather_version(self) -> Optional[str]:
         try:
-            output = subprocess.check_output([self.binary] + self.version_arguments, stderr=subprocess.STDOUT).decode()
+            output = subprocess.check_output(
+                [self.binary] + self.version_arguments, stderr=subprocess.STDOUT
+            ).decode()
         except subprocess.CalledProcessError as e:
             output = e.output.decode()
         except Exception:
@@ -43,20 +45,47 @@ class Tool:
 
         return matches[0][0]
 
-    def compress(self, source: IO[Any], destination: IO[Any], level: int, timeout: float) -> float:
-        return self.timed_run([self.binary] + self.format_arguments(self.compression_arguments, level), source, destination, timeout)
+    def compress(
+        self, source: IO[Any], destination: IO[Any], level: int, timeout: float
+    ) -> float:
+        return self.timed_run(
+            [self.binary]
+            + self.format_arguments(self.compression_arguments, level),
+            source,
+            destination,
+            timeout,
+        )
 
-    def decompress(self, source: IO[Any], destination: IO[Any], timeout: float) -> float:
-        return self.timed_run([self.binary] + self.decompression_arguments, source, destination, timeout)
+    def decompress(
+        self, source: IO[Any], destination: IO[Any], timeout: float
+    ) -> float:
+        return self.timed_run(
+            [self.binary] + self.decompression_arguments,
+            source,
+            destination,
+            timeout,
+        )
 
-    def timed_run(self, command: List[str], stdin: IO[Any], stdout: IO[Any], timeout: float) -> float:
+    def timed_run(
+        self,
+        command: List[str],
+        stdin: IO[Any],
+        stdout: IO[Any],
+        timeout: float,
+    ) -> float:
         start_time = time.time()
         self.run_with_timeout(command, stdin, stdout, timeout)
         end_time = time.time()
 
         return end_time - start_time
 
-    def run_with_timeout(self, command: List[str], stdin: IO[Any], stdout: IO[Any], timeout: float) -> None:
+    def run_with_timeout(
+        self,
+        command: List[str],
+        stdin: IO[Any],
+        stdout: IO[Any],
+        timeout: float,
+    ) -> None:
         process = subprocess.Popen(command, stdin=stdin, stdout=stdout)
         try:
             process.wait(timeout=timeout)
@@ -67,10 +96,7 @@ class Tool:
             raise
 
     def format_arguments(self, arguments, level) -> List[str]:
-        return [
-            arg.format(level=level)
-            for arg in arguments
-        ]
+        return [arg.format(level=level) for arg in arguments]
 
 
 def lrange(from_value: int, to_value: int) -> List[int]:
@@ -88,7 +114,7 @@ tools = [
         [0],
         ["--version"],
         [],
-        []
+        [],
     ),
     Tool(
         "brotli",
@@ -96,7 +122,7 @@ tools = [
         lrange(0, 11),
         ["--version"],
         ["--quality={level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "brotli (long)",
@@ -104,7 +130,7 @@ tools = [
         lrange(0, 11),
         ["--version"],
         ["--quality={level}", "--lgwin=24"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "bzip2",
@@ -112,7 +138,7 @@ tools = [
         lrange(1, 9),
         ["--version", "--help"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "gzip",
@@ -120,7 +146,7 @@ tools = [
         lrange(1, 9),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "lizard",
@@ -128,7 +154,7 @@ tools = [
         lrange(10, 49),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "lz4",
@@ -136,7 +162,7 @@ tools = [
         lrange(1, 12),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "lzf",
@@ -144,7 +170,7 @@ tools = [
         lrange(1, 12),
         ["--help"],
         [],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "lzma",
@@ -152,7 +178,7 @@ tools = [
         lrange(1, 9),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "lzop",
@@ -160,7 +186,7 @@ tools = [
         lrange(1, 9),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "lzturbo",
@@ -168,7 +194,15 @@ tools = [
         [10, 11, 12, 19, 20, 21, 22, 29, 30, 31, 32, 39, 49],
         ["--help"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
+    ),
+    Tool(
+        "lrzip (zpaq)",
+        "/usr/bin/lrzip",
+        [0],
+        ["--version"],
+        ["-qz"],
+        ["-qd"],
     ),
     Tool(
         "xz",
@@ -176,7 +210,7 @@ tools = [
         lrange(1, 9),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "zstd",
@@ -184,7 +218,7 @@ tools = [
         lrange(1, 19),
         ["--version"],
         ["-{level}"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "zstd (long)",
@@ -192,7 +226,7 @@ tools = [
         lrange(1, 19),
         ["--version"],
         ["-{level}", "--long"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "zstd (ultra)",
@@ -200,7 +234,7 @@ tools = [
         lrange(1, 22),
         ["--version"],
         ["-{level}", "--long", "--ultra"],
-        ["-d"]
+        ["-d"],
     ),
     Tool(
         "zstd (fast)",
@@ -208,6 +242,6 @@ tools = [
         lrange(1, 19) + [50, 100, 1000],
         ["--version"],
         ["--fast={level}"],
-        ["-d"]
+        ["-d"],
     ),
 ]

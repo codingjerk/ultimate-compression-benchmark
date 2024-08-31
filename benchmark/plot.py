@@ -27,7 +27,8 @@ def scatter(data, xlabel, ylabel, output):
 
     for i, (label, (xs, ys)) in enumerate(data.items()):
         plt.scatter(
-            xs, ys,
+            xs,
+            ys,
             label=label,
             marker=".",
             linewidths=2,
